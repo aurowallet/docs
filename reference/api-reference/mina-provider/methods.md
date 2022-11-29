@@ -24,7 +24,7 @@ try {
 This function can sign messages, sign and broadcast payments, stake delegations, and parties. If the payload is unrecognized, an Error is thrown.
 
 {% hint style="warning" %}
-&#x20;sendTransaction can only be used in Berkeley-QA Network for now
+&#x20;sendTransaction can only be used in Berkeley Network for now
 {% endhint %}
 
 ```typescript
