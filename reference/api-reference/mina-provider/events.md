@@ -2,7 +2,7 @@
 
 ### accountsChanged
 
-accountsChanged wiil be triggered when user switch connected account in auro wallet
+accountsChanged wiil be triggered when user switch connected account in Auro Wallet
 
 ```
 window.mina.on('accountsChanged', handler: (accounts: string[]) => void);
