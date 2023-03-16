@@ -146,6 +146,58 @@ let messageVerifyResult:boolean = await window.mina.verifyMessage({
 ```
 
 
+
+### **signFields**
+
+Used to sign fields.
+
+```javascript
+type SignFieldsArguments = {
+  message: number[]
+}
+
+type SignedFieldsData  = {
+  data:number[],
+  signature:string
+}
+
+
+window.mina.signFields(args: SignFieldsArguments): Promise<SignedFieldsData>
+```
+
+```javascript
+try {
+  const signFieldsResult = await window.mina.signFields({
+      message: [1,2,3],
+    }).catch(err => err)
+  console.log(signFieldsResult)
+} catch(error) {
+  console.log(error.message, error.code)
+}
+```
+
+### **verifyFields**
+
+Used to verify signature information.
+
+```javascript
+interface VerifyFieldsArguments {
+  publicKey: string,
+  payload: number[],
+  signature:string
+}
+
+window.mina.verifyFields(args: VerifyFieldsArguments): Promise<boolean>;
+```
+
+```javascript
+let fieldsVerifyResult:boolean = await window.mina.verifyMessage({
+  publicKey: "B62...",
+  signature: "signature result",
+  payload: "sign fields"
+})
+```
+
 ## Legacy Methods
 
 Legacy methods are discouraged, you may use these for some reason, but they may be removed from our support at any time.
@@ -202,56 +254,4 @@ try {
 } catch (error) {
   console.log(error.message, error.code)
 }
-```
-
-
-### **signFields**
-
-Used to sign fields.
-
-```javascript
-type SignFieldsArguments = {
-  message: number[]
-}
-
-type SignedFieldsData  = {
-  data:number[],
-  signature:string
-}
-
-
-window.mina.signFields(args: SignFieldsArguments): Promise<SignedFieldsData>
-```
-
-```javascript
-try {
-  const signFieldsResult = await window.mina.signFields({
-      message: [1,2,3],
-    }).catch(err => err)
-  console.log(signFieldsResult)
-} catch(error) {
-  console.log(error.message, error.code)
-}
-```
-
-### **verifyFields**
-
-Used to verify signature information.
-
-```javascript
-interface VerifyFieldsArguments {
-  publicKey: string,
-  payload: number[],
-  signature:string
-}
-
-window.mina.verifyFields(args: VerifyFieldsArguments): Promise<boolean>;
-```
-
-```javascript
-let fieldsVerifyResult:boolean = await window.mina.verifyMessage({
-  publicKey: "B62...",
-  signature: "signature result",
-  payload: "sign fields"
-})
 ```
