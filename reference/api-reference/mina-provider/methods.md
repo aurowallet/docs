@@ -248,7 +248,7 @@ window.mina.verifyFields(args: VerifyFieldsArguments): Promise<boolean>;
 
 ```javascript
 let fieldsVerifyResult:boolean = await window.mina.verifyMessage({
-  publicKey: "B62...",,
+  publicKey: "B62...",
   signature: "signature result",
   payload: "sign fields"
 })
