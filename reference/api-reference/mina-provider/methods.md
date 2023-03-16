@@ -19,6 +19,20 @@ try {
 }
 ```
 
+
+### **requestNetwork**
+
+Request which type of network is using.
+
+```typescript
+window.mina.requestNetwork(): Promise<'Mainnet' | 'Devnet' | 'Unknown'>;
+```
+
+```typescript
+const network = await window.mina.requestNetwork();
+console.log(network); //  'Mainnet' or 'Devnet' or 'Unknown'
+```
+
 ### **getAccounts**
 
 Used for website request connected account
@@ -131,18 +145,6 @@ let messageVerifyResult:boolean = await window.mina.verifyMessage({
 })
 ```
 
-### **requestNetwork**
-
-Request which type of network is using.
-
-```typescript
-window.mina.requestNetwork(): Promise<'Mainnet' | 'Devnet' | 'Unknown'>;
-```
-
-```typescript
-const network = await window.mina.requestNetwork();
-console.log(network); //  'Mainnet' or 'Devnet' or 'Unknown'
-```
 
 ## Legacy Methods
 
