@@ -19,6 +19,19 @@ try {
 }
 ```
 
+### **getAccounts**
+
+Used for website request connected account
+
+```javascript
+window.mina.getAccounts(): Promise<string[]>;
+```
+
+```javascript
+// accounts is an array that contains approve account's address,if no account, will back []
+const accounts = await window.mina.getAccounts()
+```
+
 ### sendTransaction
 
 This function can sign messages, sign and broadcast payments, stake delegations, and parties. If the payload is unrecognized, an Error is thrown.
@@ -58,7 +71,7 @@ try {
 }
 ```
 
-### s**ignMessage**
+### **signMessage**
 
 Used to sign information.
 
@@ -187,4 +200,56 @@ try {
 } catch (error) {
   console.log(error.message, error.code)
 }
+```
+
+
+### **signFields**
+
+Used to sign fields.
+
+```javascript
+type SignFieldsArguments = {
+  message: number[]
+}
+
+type SignedFieldsData  = {
+  data:number[],
+  signature:string
+}
+
+
+window.mina.signFields(args: SignFieldsArguments): Promise<SignedFieldsData>
+```
+
+```javascript
+try {
+  const signFieldsResult = await window.mina.signFields({
+      message: [1,2,3],
+    }).catch(err => err)
+  console.log(signFieldsResult)
+} catch(error) {
+  console.log(error.message, error.code)
+}
+```
+
+### **verifyFields**
+
+Used to verify signature information.
+
+```javascript
+interface VerifyFieldsArguments {
+  publicKey: string,
+  payload: number[],
+  signature:string
+}
+
+window.mina.verifyFields(args: VerifyFieldsArguments): Promise<boolean>;
+```
+
+```javascript
+let fieldsVerifyResult:boolean = await window.mina.verifyMessage({
+  publicKey: "B62...",,
+  signature: "signature result",
+  payload: "sign fields"
+})
 ```
