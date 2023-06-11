@@ -157,12 +157,12 @@ Used for signature fields.
 
 ```javascript
 type SignFieldsArguments = {
-  message: number[]
+  message: (string|number)[],
 }
 
 type SignedFieldsData = {
-  data: number[],
-  signature: string
+  data: (string|number)[],
+  signature:string
 }
 
 
@@ -172,7 +172,7 @@ window.mina.signFields(args: SignFieldsArguments): Promise<SignedFieldsData>
 ```javascript
 try {
   const signFieldsResult = await window.mina.signFields({
-    message: [1, 2, 3],
+    message: [1,2,3],// or ["1","2","3"]
   }).catch(err => err)
   console.log(signFieldsResult)
 } catch (error) {
@@ -188,8 +188,8 @@ Used for verify signature fields information.
 ```javascript
 interface VerifyFieldsArguments {
   publicKey: string,
-  payload: number[],
-  signature: string
+  payload: (string|number)[],
+  signature:string
 }
 
 window.mina.verifyFields(args: VerifyFieldsArguments): Promise<boolean>;
