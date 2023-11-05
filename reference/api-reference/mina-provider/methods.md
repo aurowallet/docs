@@ -171,7 +171,8 @@ let messageVerifyResult: boolean = await window.mina.verifyMessage({
 ```
 ### **signJsonMessage**
 
-Used for sign Json data.
+Used for sign Json data. `since mina-signer 0.2.7`
+
 
 ```javascript
 type JsonMessageData  = {
@@ -232,8 +233,7 @@ try {
 ```
 
 ### **verifyJsonMessage**
-
-Used for verify Json messgae information.
+Used for verify Json messgae information. `since mina-signer 0.2.7`
 
 ```javascript
 interface VerifyMessageArgs {
@@ -312,8 +312,7 @@ let fieldsVerifyResult:boolean = await window.mina.verifyMessage({
 ```
 
 ### **createNullifier**
-
-Used for create nullifier.
+Used for create nullifier. `since mina-signer 0.2.7`
 
 ```javascript
 type CreateNullifierArgs = {
@@ -355,8 +354,7 @@ try {
 
 
 ### **switchChain**
-
-Used for switch extension wallet chain.
+Used for switch extension wallet chain. `since mina-signer 0.2.7`
 current support mainnet , devnet , berkeley , testworld2 , 
 
 ```javascript
@@ -384,8 +382,8 @@ try {
 ```
 
 ### **addChain**
+Used for add Chain or switch extension wallet chain. `since mina-signer 0.2.7`
 
-Used for add Chain or switch extension wallet chain
 
 ```javascript
 type AddChainArgs = {
