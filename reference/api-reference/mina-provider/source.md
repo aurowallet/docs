@@ -1,7 +1,4 @@
 # Source
 
-  - Demo: [Dapp](https://aurowallet.github.io/auro-test-dapp/)  
-  - SourceCode: [SourceCode](https://github.com/aurowallet/auro-test-dapp)
-
-  - Demo(Berkeley): [Dapp](https://aurowallet.github.io/auro-test-dapp-berkeley/)  
-  - SourceCode(Berkeley): [SourceCode](https://github.com/aurowallet/auro-test-dapp-berkeley)
+  - Demo: [ZkApp](https://test-zkapp.aurowallet.com/)  
+  - SourceCode: [SourceCode](https://github.com/aurowallet/test-zkapp)

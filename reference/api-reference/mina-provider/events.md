@@ -17,14 +17,21 @@ window.mina.on('accountsChanged', handler: (accounts: string[]) => {
 ### **chainChanged**
 
 
-chainChanged will be triggered when user switch chainType in Auro Wallet.
+chainChanged will be triggered when user switch chainId in Auro Wallet.
 
 ```javascript
-window.mina.on('chainChanged', handler: (chainType: string) => void);
+
+type ChainInfoArgs ={
+  chainId:string,
+  name:string,
+}
+
+window.mina.on('chainChanged', handler: (chainInfo: ChainInfoArgs) => void);
 ```
 
 ```javascript
-window.mina.on('chainChanged', handler: (chainType: string) => {
-   console.log('current chain', chainType)
+window.mina.on('chainChanged', handler: (chainInfo: ChainInfoArgs) => {
+   console.log('current chain id', chainInfo.chainId)
+   console.log('current chain name', chainInfo.name)
 });
 ```
