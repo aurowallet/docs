@@ -1,3 +1,9 @@
+---
+description: >-
+  Here are the monitoring events of the provider. There are currently two types
+  of events, account update and chain update.
+---
+
 # Events
 
 ### **accountsChanged**
@@ -15,7 +21,6 @@ window.mina.on('accountsChanged', handler: (accounts: string[]) => {
 ```
 
 ### **chainChanged**
-
 
 chainChanged will be triggered when user switch chainId in Auro Wallet.
 

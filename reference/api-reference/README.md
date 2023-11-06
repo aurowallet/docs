@@ -4,8 +4,6 @@ Dive into the specifics of each API endpoint by checking out our complete docume
 
 ## Mina Provider
 
-
-
-{% content-ref url="mina-provider/" %}
-[mina-provider](mina-provider/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
