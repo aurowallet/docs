@@ -103,18 +103,6 @@ console.log(signResult)
 
 ```
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/image.png" alt="" width="255"><figcaption><p>sign json message</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/image (1).png" alt="" width="248"><figcaption><p>Sign Easy message</p></figcaption></figure>
-
-</div>
-
-
-
 ## Verify Message
 
 this methods used for verify signed Message
@@ -134,5 +122,6 @@ interface VerifyMessageArgs extends SignedData {}
 let verifyResult:boolean|ProviderError = await (window as any)?.mina
   ?.verifyMessage(verifyMessageBody)
   .catch((err: any) => err);
+  
 console.log(verifyResult)// if verify success,will return true
 ```
