@@ -42,12 +42,13 @@ Promise<ChainInfoArgs | ProviderError>
 
 ### Errors
 
-|        |                                       |                                                |
-| ------ | ------------------------------------- | ---------------------------------------------- |
-| 1002   | user reject transaction               |                                                |
-| 1001   | User disconnect, please connect first |                                                |
+|       |                                       |                                                |
+| ----- | ------------------------------------- | ---------------------------------------------- |
+| 1002  | user reject transaction               |                                                |
+| 1001  | User disconnect, please connect first |                                                |
 | 20003 | The parameters were invalid           | may cause by address, amount,fee type dismatch |
 | 20004 | Not support chain                     |                                                |
+| 20005 | Request already pending. Please wait. | chain action now support one at the same time. |
 | 23001 | Origin dismatch                       |                                                |
 
 ## Example
@@ -82,5 +83,10 @@ await window.mina?.addChain(addInfo).catch((err: any) => err);
 {
   "code": 20003,
   "message": "Invalid method parameter(s)."
+}
+// have pending chain action
+{
+  "code": 20005,
+  "message": "Request already pending. Please wait."
 }
 ```

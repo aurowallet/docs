@@ -4,8 +4,6 @@ description: This method is used to switch chain to the wallet by chainId
 
 # mina\_switchChain
 
-
-
 ### Params
 
 ```typescript
@@ -37,11 +35,12 @@ Promise<ChainInfoArgs | ProviderError>
 
 ### Errors
 
-|        |                             |                                                |
-| ------ | --------------------------- | ---------------------------------------------- |
-| 1002   | user reject transaction     |                                                |
-| 20003 | The parameters were invalid | may cause by address, amount,fee type dismatch |
-| 23001 | Origin dismatch             |                                                |
+|       |                                       |                                                |
+| ----- | ------------------------------------- | ---------------------------------------------- |
+| 1002  | user reject transaction               |                                                |
+| 20003 | The parameters were invalid           | may cause by address, amount,fee type dismatch |
+| 20005 | Request already pending. Please wait. | chain action now support one at the same time. |
+| 23001 | Origin dismatch                       |                                                |
 
 ## Example
 
@@ -55,7 +54,7 @@ await window.mina?.switchChain({ chainId: "mainnet" }).catch((err: any) => err);
 
 ### Result
 
-```
+```typescript
 // success
 {
   "chainId": "mainnet",
@@ -72,5 +71,9 @@ await window.mina?.switchChain({ chainId: "mainnet" }).catch((err: any) => err);
   "code": 20003,
   "message": "Invalid method parameter(s)."
 }
+// have pending chain action
+{
+  "code": 20005,
+  "message": "Request already pending. Please wait."
+}
 ```
-
