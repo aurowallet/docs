@@ -1,3 +1,3 @@
 # Methods
 
-Here are descriptions and examples of all methods
+Here are descriptions and examples of all methods.

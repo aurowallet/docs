@@ -1,5 +1,5 @@
 ---
-description: This method is used to add a custom chain to the wallet
+description: This method is used to add a custom chain to the wallet.
 ---
 
 # mina\_addChain
@@ -42,14 +42,14 @@ Promise<ChainInfoArgs | ProviderError>
 
 ### Errors
 
-|       |                                       |                                                |
-| ----- | ------------------------------------- | ---------------------------------------------- |
-| 1002  | user reject transaction               |                                                |
-| 1001  | User disconnect, please connect first |                                                |
-| 20003 | The parameters were invalid           | may cause by address, amount,fee type dismatch |
-| 20004 | Not support chain                     |                                                |
-| 20005 | Request already pending. Please wait. | chain action now support one at the same time. |
-| 23001 | Origin dismatch                       |                                                |
+|       |                                       |                                                 |
+| ----- | ------------------------------------- | ----------------------------------------------- |
+| 1002  | user reject transaction               |                                                 |
+| 1001  | User disconnect, please connect first |                                                 |
+| 20003 | The parameters were invalid           | may cause by address, amount,fee type dismatch. |
+| 20004 | Not support chain                     |                                                 |
+| 20005 | Request already pending. Please wait. | chain action now support one at the same time.  |
+| 23001 | Origin dismatch                       |                                                 |
 
 ## Example
 

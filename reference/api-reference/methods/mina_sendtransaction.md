@@ -1,5 +1,5 @@
 ---
-description: This method is used for zkapp contract transaction signature
+description: This method is used for zkapp contract transaction signature.
 ---
 
 # mina\_sendTransaction
@@ -7,7 +7,7 @@ description: This method is used for zkapp contract transaction signature
 ###
 
 {% hint style="info" %}
-you need to create zk commond in zkApp first, and sign with wallet
+you need to create zk commond in zkApp first, and sign with wallet.
 {% endhint %}
 
 ### Params
@@ -46,12 +46,12 @@ Promise<SendTransactionResult | ProviderError>
 
 ### Errors
 
-|        |                                     |                                                |
-| ------ | ----------------------------------- | ---------------------------------------------- |
-| 1002   | user reject transaction             |                                                |
-| 1001   | User disconnect, need connect first | can not get connected account                  |
-| 20003 | The parameters were invalid         | may cause by address, amount,fee type dismatch |
-| 23001 | Origin dismatch                     |                                                |
+|       |                                      |                                                 |
+| ----- | ------------------------------------ | ----------------------------------------------- |
+| 1002  | user reject transaction.             |                                                 |
+| 1001  | User disconnect, need connect first. | can not get connected account.                  |
+| 20003 | The parameters were invalid.         | may cause by address, amount,fee type dismatch. |
+| 23001 | Origin dismatch.                     |                                                 |
 
 ## Example
 

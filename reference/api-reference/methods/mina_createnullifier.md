@@ -1,5 +1,5 @@
 ---
-description: Mainly used to create nullifiers
+description: Mainly used to create nullifiers.
 ---
 
 # mina\_createNullifier
@@ -44,11 +44,11 @@ Promise<Nullifier | ProviderError>
 
 ### Errors
 
-|        |                                     |                               |
-| ------ | ----------------------------------- | ----------------------------- |
-| 1002   | user reject transaction             |                               |
-| 1001   | User disconnect, need connect first | can not get connected account |
-| 23001 | Origin dismatch                     |                               |
+|       |                                      |                                |
+| ----- | ------------------------------------ | ------------------------------ |
+| 1002  | user reject transaction              |                                |
+| 1001  | User disconnect, need connect first. | can not get connected account. |
+| 23001 | Origin dismatch                      |                                |
 
 ## Example
 
@@ -104,4 +104,3 @@ await window.mina.createNullifier({ message: signContent }).catch((err: any) => 
   "message": "User rejected the request."
 }
 ```
-

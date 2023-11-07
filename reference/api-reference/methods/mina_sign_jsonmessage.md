@@ -48,11 +48,11 @@ Promise<SignedData | ProviderError>
 
 ### Errors
 
-|        |                                     |                               |
-| ------ | ----------------------------------- | ----------------------------- |
-| 1002   | user reject transaction             |                               |
-| 1001   | User disconnect, need connect first | can not get connected account |
-| 23001 | Origin dismatch                     |                               |
+|       |                                      |                               |
+| ----- | ------------------------------------ | ----------------------------- |
+| 1002  | user reject transaction              |                               |
+| 1001  | User disconnect, need connect first. | can not get connected account |
+| 23001 | Origin dismatch                      |                               |
 
 ## Example
 

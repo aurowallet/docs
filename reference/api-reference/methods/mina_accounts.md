@@ -2,7 +2,7 @@
 description: >-
   This method is used to request the current connect account . It is a silent
   request. If there is a connected account, it will return the connected
-  account. If not, it will return an empty array
+  account. If not, it will return an empty array.
 ---
 
 # mina\_accounts

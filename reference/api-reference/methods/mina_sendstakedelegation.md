@@ -1,5 +1,5 @@
 ---
-description: This method is used by zkApp to call wallet stake delegation
+description: This method is used by zkApp to call wallet stake delegation.
 ---
 
 # mina\_sendStakeDelegation
@@ -37,10 +37,10 @@ Promise<BroadcastTransactionResult | ProviderError>
 
 ### Errors
 
-|        |                                     |                                                |
-| ------ | ----------------------------------- | ---------------------------------------------- |
-| 1002   | user reject transaction             |                                                |
-| 1001   | User disconnect, need connect first | can not get connected account                  |
+|       |                                     |                                                |
+| ----- | ----------------------------------- | ---------------------------------------------- |
+| 1002  | user reject transaction             |                                                |
+| 1001  | User disconnect, need connect first | can not get connected account                  |
 | 20003 | The parameters were invalid         | may cause by address, amount,fee type dismatch |
 | 23001 | Origin dismatch                     |                                                |
 

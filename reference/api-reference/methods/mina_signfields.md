@@ -1,11 +1,11 @@
 ---
-description: This method is used to sign the field
+description: This method is used to sign the field.
 ---
 
 # mina\_signFields
 
 {% hint style="info" %}
-The output of numbers and string type numbers is the same in sign fields&#x20;
+The output of numbers and string type numbers is the same in sign fields.
 {% endhint %}
 
 ### Params
@@ -38,10 +38,10 @@ Promise<SignedFieldsData | ProviderError>
 
 ### Error
 
-|        |                                     |                               |
-| ------ | ----------------------------------- | ----------------------------- |
-| 1002   | user reject transaction             |                               |
-| 1001   | User disconnect, need connect first | can not get connected account |
+|       |                                     |                               |
+| ----- | ----------------------------------- | ----------------------------- |
+| 1002  | user reject transaction             |                               |
+| 1001  | User disconnect, need connect first | can not get connected account |
 | 23001 | Origin dismatch                     |                               |
 
 ## Example

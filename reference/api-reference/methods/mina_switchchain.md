@@ -1,5 +1,5 @@
 ---
-description: This method is used to switch chain to the wallet by chainId
+description: This method is used to switch chain to the wallet by chainId.
 ---
 
 # mina\_switchChain

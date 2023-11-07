@@ -1,7 +1,7 @@
 ---
 description: >-
-  This method is used by zkApp to call wallet sendPayment.(current supports main
-  coin send.)
+  This method is used by zkApp to call wallet sendPayment (current supports main
+  coin send).
 ---
 
 # mina\_sendPayment
@@ -40,10 +40,10 @@ Promise&#x3C;BroadcastTransactionResult | ProviderError>
 
 ### Errors
 
-|        |                                     |                                                |
-| ------ | ----------------------------------- | ---------------------------------------------- |
-| 1002   | user reject transaction             |                                                |
-| 1001   | User disconnect, need connect first | can not get connected account                  |
+|       |                                     |                                                |
+| ----- | ----------------------------------- | ---------------------------------------------- |
+| 1002  | user reject transaction             |                                                |
+| 1001  | User disconnect, need connect first | can not get connected account                  |
 | 20003 | The parameters were invalid         | may cause by address, amount,fee type dismatch |
 | 23001 | Origin dismatch                     |                                                |
 
