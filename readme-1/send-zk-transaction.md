@@ -1,7 +1,7 @@
 ---
 description: >-
   This scenario is mainly used to update zk transactions, including create
-  zk-contract and update zk-contracts
+  zk-contract and update zk-contracts.
 ---
 
 # Send zk Transaction
@@ -44,5 +44,5 @@ console.log(updateResult)
 ```
 
 {% hint style="info" %}
-Here is an demo of update a zk. Creating the contract requires zkApp to sign once using zk-account keys, and then the plug-in signs it twice. The [created demo is here](https://github.com/aurowallet/test-zkapp/blob/feature/zk/ui/src/components/HomeComponents/SignTransactionBox.tsx#L263)
+Here is an demo of update a zk. Creating the contract requires zkapp to sign once using zk-account keys, and then the plug-in signs it twice. The [created demo is here](https://github.com/aurowallet/test-zkapp/blob/feature/zk/ui/src/components/HomeComponents/SignTransactionBox.tsx#L263)
 {% endhint %}

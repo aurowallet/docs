@@ -105,7 +105,7 @@ console.log(signResult)
 
 ## Verify Message
 
-this methods used for verify signed Message
+this methods used for verify signed Message.
 
 ```typescript
 interface SignedData {

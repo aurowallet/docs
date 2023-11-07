@@ -1,5 +1,5 @@
 ---
-description: Scenarios for connect wallets and request accounts
+description: Scenarios for connect wallets and request accounts.
 ---
 
 # Connect Wallet

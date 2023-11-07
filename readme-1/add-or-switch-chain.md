@@ -6,7 +6,7 @@ description: Scenarios for interact chain with wallets.
 
 ## RequestNetwork
 
-During initialization, zkApp can get current chainId and chain name by call `requestNetwork`
+During initialization, zkApp can get current chainId and chain name by call `requestNetwork`.
 
 ```typescript
 const network: ChainInfoArgs = await window.mina?.requestNetwork()
@@ -15,7 +15,7 @@ const network: ChainInfoArgs = await window.mina?.requestNetwork()
 
 ## `SwitchChain`
 
-zkApp can switch chain throw `switchChain`
+zkApp can switch chain throw `switchChain`.
 
 {% hint style="success" %}
 current only support these chain Id:

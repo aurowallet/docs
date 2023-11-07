@@ -1,5 +1,5 @@
 ---
-description: Here are some themes used, you can find demo of use here
+description: Here are some themes used, you can find demo of use here.
 ---
 
 # How to
