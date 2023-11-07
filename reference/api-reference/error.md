@@ -17,7 +17,7 @@ interface ProviderError extends Error {
 
 ## Error code information
 
-if return failed info , zkapp can get error code.
+if return failed info , zkApp can get error code.
 
 ```typescript
  * code 1001 User disconnect, need connect first
