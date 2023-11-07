@@ -6,7 +6,7 @@ description: Scenarios for interact chain with wallets.
 
 ## RequestNetwork
 
-During initialization, ZkApp can get current chainId and chain name by call `requestNetwork`
+During initialization, zkApp can get current chainId and chain name by call `requestNetwork`
 
 ```typescript
 const network: ChainInfoArgs = await window.mina?.requestNetwork()

@@ -6,7 +6,7 @@
   * [Add or Switch Chain](readme-1/add-or-switch-chain.md)
   * [Create Nullifier](readme-1/create-nullifier.md)
   * [Send Transaction](readme-1/send-transaction.md)
-  * [Send Zk Transaction](readme-1/send-zk-transaction.md)
+  * [Send zk Transaction](readme-1/send-zk-transaction.md)
   * [Sign Message](readme-1/sign-message.md)
 
 ## Reference

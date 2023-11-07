@@ -4,9 +4,9 @@ description: >-
   zk-contract and update zk-contracts
 ---
 
-# Send Zk Transaction
+# Send zk Transaction
 
-## Update Zk contract
+## Update zk contract
 
 this method main use sign zk commond.
 

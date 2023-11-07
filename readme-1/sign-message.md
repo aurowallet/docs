@@ -33,7 +33,7 @@ const content = `Click "Sign" to sign in. No password needed!
 
 This request will not trigger a blockchain transaction or cost any gas fees.
 
-I accept the Auro Test ZKApp Terms of Service: ${window.location.href}
+I accept the Auro Test zKApp Terms of Service: ${window.location.href}
 
 address: ${currentAccount}
 iat: ${new Date().getTime()}`;
