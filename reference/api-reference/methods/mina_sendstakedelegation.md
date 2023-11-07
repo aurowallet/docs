@@ -39,10 +39,10 @@ Promise<BroadcastTransactionResult | ProviderError>
 
 |        |                                     |                                                |
 | ------ | ----------------------------------- | ---------------------------------------------- |
-| 4001   | user reject transaction             |                                                |
-| 4300   | User disconnect, need connect first | can not get connected account                  |
-| -32602 | The parameters were invalid         | may cause by address, amount,fee type dismatch |
-| -32900 | Origin dismatch                     |                                                |
+| 1002   | user reject transaction             |                                                |
+| 1001   | User disconnect, need connect first | can not get connected account                  |
+| 20003 | The parameters were invalid         | may cause by address, amount,fee type dismatch |
+| 23001 | Origin dismatch                     |                                                |
 
 ## Example
 
@@ -72,17 +72,17 @@ await window.mina?.sendLegacyStakeDelegation({
 
 // user reject 
 {
-  "code": 4001,
+  "code": 1002,
   "message": "User rejected the request."
 }
 // can not get connect address
 {
-  "code": 4300,
+  "code": 1001,
   "message": "User disconnect, please connect first"
 }
 // params check error. there check :addres ,amount , fee
 {
-  "code": -32602,
+  "code": 20003,
   "message": "Invalid method parameter(s)."
 }
 ```

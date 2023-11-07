@@ -26,7 +26,7 @@ Promise<string[] | ProviderError>
 
 ### Error
 
-<table><thead><tr><th></th><th width="332.3333333333333"></th><th></th></tr></thead><tbody><tr><td>4001</td><td>The request was rejected by the use</td><td></td></tr><tr><td>-32007</td><td>No wallet found</td><td>need create or restore wallet first</td></tr><tr><td>-32900</td><td>Origin dismatch</td><td>check origin safe</td></tr></tbody></table>
+<table><thead><tr><th></th><th width="332.3333333333333"></th><th></th></tr></thead><tbody><tr><td>1002</td><td>The request was rejected by the use</td><td></td></tr><tr><td>20001</td><td>No wallet found</td><td>need create or restore wallet first</td></tr><tr><td>23001</td><td>Origin dismatch</td><td>check origin safe</td></tr></tbody></table>
 
 ## Example
 
@@ -42,7 +42,7 @@ await window.mina.requestAccounts().catch((err: any) => err);
 ```typescript
 // user reject
 {
-  "code": 4001,
+  "code": 1002,
   "message": "User rejected the request."
 }
 

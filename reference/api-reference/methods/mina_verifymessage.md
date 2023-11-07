@@ -36,8 +36,8 @@ Promise<boolean | ProviderError>
 
 |        |                 |   |
 | ------ | --------------- | - |
-| -32008 | Verify failed   |   |
-| -32900 | Origin dismatch |   |
+| 20002 | Verify failed   |   |
+| 23001 | Origin dismatch |   |
 
 ## Example
 
@@ -66,6 +66,6 @@ false | true
 // verify failed
 {
   "message": "Verify failed",
-  "code": -32008
+  "code": 20002
 }
 ```

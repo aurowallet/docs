@@ -44,11 +44,11 @@ Promise<ChainInfoArgs | ProviderError>
 
 |        |                                       |                                                |
 | ------ | ------------------------------------- | ---------------------------------------------- |
-| 4001   | user reject transaction               |                                                |
-| 4300   | User disconnect, please connect first |                                                |
-| -32602 | The parameters were invalid           | may cause by address, amount,fee type dismatch |
-| -32006 | Not support chain                     |                                                |
-| -32900 | Origin dismatch                       |                                                |
+| 1002   | user reject transaction               |                                                |
+| 1001   | User disconnect, please connect first |                                                |
+| 20003 | The parameters were invalid           | may cause by address, amount,fee type dismatch |
+| 20004 | Not support chain                     |                                                |
+| 23001 | Origin dismatch                       |                                                |
 
 ## Example
 
@@ -75,12 +75,12 @@ await window.mina?.addChain(addInfo).catch((err: any) => err);
 
 // user reject 
 {
-  "code": 4001,
+  "code": 1002,
   "message": "User rejected the request."
 }
 // params check error. there check :addres ,amount , fee
 {
-  "code": -32602,
+  "code": 20003,
   "message": "Invalid method parameter(s)."
 }
 ```
