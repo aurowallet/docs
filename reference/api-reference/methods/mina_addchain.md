@@ -7,7 +7,7 @@ description: This method is used to add a custom chain to the wallet
 ###
 
 {% hint style="success" %}
-if you want to switch by url , you can use this method . if url is added to wallet , will call switch\_chain auto.
+if you want to switch by URL , you can use this method . if URL is added to wallet , will call switch\_chain auto.
 {% endhint %}
 
 ### Params

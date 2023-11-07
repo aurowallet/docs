@@ -15,10 +15,10 @@ const network: ChainInfoArgs = await window.mina?.requestNetwork()
 
 ## `SwitchChain`
 
-zkApp can switch chain throw `switchChain`&#x20;
+zkApp can switch chain throw `switchChain`
 
 {% hint style="success" %}
-current only support these chain Id:&#x20;
+current only support these chain Id:
 
 * mainnet
 * devnet
@@ -47,7 +47,7 @@ const switchResult:ChainInfoArgs|ProviderError = await window.mina
 
 ## Add Chain
 
-If want to customize the adding chain or switch chain, can use this method. When the url has been added, it will request to switch to chain corresponding to the url.
+If want to customize the adding chain or switch chain, can use this method. When the url has been added, it will request to switch to chain corresponding to the URL.
 
 ```typescript
 
