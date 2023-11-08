@@ -4,10 +4,8 @@ description: Mainly used to create nullifiers.
 
 # Create Nullifier
 
-```typescript
-
-type Group = {
-    x: bigint;
+<pre class="language-typescript"><code class="lang-typescript"><strong>type Group = {
+</strong>    x: bigint;
     y: bigint;
 };
 
@@ -36,4 +34,4 @@ const signResult: Nullifier|ProviderError = await window.mina
           message: "fields",
         })
         .catch((err: any) => err);
-```
+</code></pre>

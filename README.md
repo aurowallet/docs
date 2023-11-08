@@ -5,14 +5,14 @@ description: Welcome to the Auro Wallet documentation!
 # Getting Started
 
 {% hint style="info" %}
-[@aurowallet/mina-provider](https://www.npmjs.com/package/@aurowallet/mina-provider) is the middleware on the mina protocol used for interaction between zkapp and wallets. Mainly helps zkApp developers to interact with the wallet convenient. This document is mainly used to introduce the functions of mina provider and how to use the Api.
+[@aurowallet/mina-provider](https://www.npmjs.com/package/@aurowallet/mina-provider) is the middleware on the Mina Protocol used for interaction between zkApp and wallets. This document is mainly used to introduce the functions of Mina Provider and how to use the API.
 {% endhint %}
 
 ## How to integrate
 
 ***
 
-Here are some themes used, you can find examples of use here.
+Introduced all the methods provided by Mina Provider and how zkApp can better work with Auro Wallet.
 
 {% content-ref url="readme-1/" %}
 [readme-1](readme-1/)
