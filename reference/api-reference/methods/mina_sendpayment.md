@@ -14,7 +14,7 @@ interface SendLegacyPaymentArgs  {
   readonly to: string
   // amount is the send amount , with decimal. like 1.1 MINA
   readonly amount: number
-  // option. custom fee. auro also provide advance to change fee
+  // option. custom fee. Auro Wallet also provide advance to change fee
   readonly fee?: number
   // option. custome memo. 
   readonly memo?:string
@@ -55,7 +55,7 @@ Promise&#x3C;BroadcastTransactionResult | ProviderError>
 const amount = 0.1;
 const receiveAddress = "B62qpjxUpgdjzwQfd8q2gzxi99wN7SCgmofpvw27MBkfNHfHoY2VH32"
 const fee = 0.012
-const memo = "auro wallet"
+const memo = "Auro Wallet"
 
 await window.mina?.sendLegacyPayment({
         amount: amount,

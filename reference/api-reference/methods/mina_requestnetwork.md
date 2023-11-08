@@ -1,5 +1,5 @@
 ---
-description: This method is used to request the chain info of the Auro wallet.
+description: This method is used to request the chain info of the Auro Wallet.
 ---
 
 # mina\_requestNetwork

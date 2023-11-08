@@ -1,5 +1,5 @@
 ---
-description: Here is the error message returned by the provider.
+description: Here is the error message return by the provider.
 ---
 
 # Error
@@ -17,7 +17,7 @@ interface ProviderError extends Error {
 
 ## Error code information
 
-if return failed info , zkapp can get error code.
+if return failed info , zkApp can get error code.
 
 ```typescript
  * code 1001 User disconnect, need connect first
@@ -26,7 +26,7 @@ if return failed info , zkapp can get error code.
  * code 20002 Verify failed
  * code 20003 The parameters were invalid
  * code 20004 Not support chain
- * code 20005 Have Pending chain action
+ * code 20005 Have pending chain action
  * code 21001 Internal error
  * code 22001 Unspecified error message
  * code 23001 Origin dismatch

@@ -1,5 +1,5 @@
 ---
-description: This method is used for zkapp contract transaction signature.
+description: This method is used for zkApp contract transaction signature.
 ---
 
 # mina\_sendTransaction

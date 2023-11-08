@@ -10,9 +10,9 @@ description: Scenarios for connect wallets and request accounts.
 When using the API, you need to ensure that the browser has successfully obtained the **`window.mina`** object.
 {% endhint %}
 
-The presence of the mina provider object, `window.mina`, in a user's browser indicates an mina-protocol user.
+The presence of the mina provider object, `window.mina`, in a user's browser indicates an Mina Protocol user.
 
-To demonstrate this, verify whether your browser is running Auro-Wallet by copying and pasting the following code snippet into your browser's developer console:
+To demonstrate this, verify whether your browser is running Auro Wallet by copying and pasting the following code snippet into your browser's developer console:
 
 ```javascript
 if (typeof window.mina !== 'undefined') {
@@ -22,7 +22,7 @@ if (typeof window.mina !== 'undefined') {
 
 ## Request Account
 
-Interacting with auro wallet require connect account. This method returns an array when user confirm authorizes, which contains address that authenticated. The current array returns one address at a time. Returns a ProviderError when user reject authorization.
+Interacting with Auro Wallet require connect account. This method returns an array when user confirm authorizes, which contains address that authenticated. The current array returns one address at a time. Returns a ProviderError when user reject authorization.
 
 ```typescript
 const account:string[]|ProviderError = await window?.mina.requestAccounts()
@@ -32,7 +32,7 @@ console.log(account)
 ```
 
 {% hint style="info" %}
-**requestAccounts** will show a popup window when auro wallet lock or have no connected account, if you  want to request account without popup window . you can use \
+**requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you  want to request account without popup window . you can use \
 [getAccounts](../reference/api-reference/methods/#getaccounts)
 {% endhint %}
 

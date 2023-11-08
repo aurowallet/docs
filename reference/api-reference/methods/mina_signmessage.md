@@ -56,7 +56,7 @@ const content = `Click "Sign" to sign in. No password needed!
 
 This request will not trigger a blockchain transaction or cost any gas fees.
 
-I accept the Auro Test zKApp Terms of Service: ${window.location.href}
+I accept the Auro Test zkApp Terms of Service: ${window.location.href}
 
 address: ${currentAccount}
 iat: ${new Date().getTime()}`;
@@ -74,7 +74,7 @@ await window.mina?.signMessage({ message: content }).catch((err: any) => err);
     "scalar": "5638584219029837254561020594864591092072844530049610703222272818700774330907"
   },
   "publicKey": "B62qr2zNMypNKXmzMYSVotChTBRfXzHRtshvbuEjAQZLq6aEa8RxLyD",
-  "data": "Click \"Sign\" to sign in. No password needed!\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nI accept the Auro Test zKApp Terms of Service: http://localhost:3000/\n\naddress: \niat: 1699294808439"
+  "data": "Click \"Sign\" to sign in. No password needed!\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nI accept the Auro Test zkApp Terms of Service: http://localhost:3000/\n\naddress: \niat: 1699294808439"
 }
 
 // can not get connect address

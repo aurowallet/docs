@@ -10,7 +10,7 @@ description: This method is used by zkApp to call wallet stake delegation.
 type SendLegacyStakeDelegationArgs  = {
   // to is the target block Producer address. require base58 address.
   readonly to: string,
-  // option. custom fee. auro also provide advance to change fee
+  // option. custom fee. Auro Wallet also provide advance to change fee
   readonly fee?: number,
   // option. custome memo. 
   readonly memo?:string

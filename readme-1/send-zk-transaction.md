@@ -44,5 +44,5 @@ console.log(updateResult)
 ```
 
 {% hint style="info" %}
-Here is an demo of update a zk. Creating the contract requires zkapp to sign once using zk-account keys, and then the plug-in signs it twice. The [created demo is here](https://github.com/aurowallet/test-zkapp/blob/feature/zk/ui/src/components/HomeComponents/SignTransactionBox.tsx#L263)
+Here is an demo of update a zk contract. To create a zkApp contract, you need to use [o1js](https://www.npmjs.com/package/o1js) to sign first, and then use Auro Wallet to sign the result of o1js signed.The created zkApp contract demo is [here](https://github.com/aurowallet/test-zkapp/blob/feature/zk/ui/src/components/HomeComponents/SignTransactionBox.tsx#L263)
 {% endhint %}
