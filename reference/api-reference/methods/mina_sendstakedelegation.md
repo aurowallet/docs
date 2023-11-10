@@ -8,7 +8,7 @@ description: This method is used by zkApp to call Auro Wallet stake delegation.
 
 ```typescript
 type SendStakeDelegationArgs  = {
-    // to is block producer address. require base58 address.
+    // block producer address. require base58 address.
     readonly to: string,
     // option. Auro Wallet also provide advance option to change fee.
     readonly fee?: number,
