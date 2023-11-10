@@ -1,14 +1,14 @@
 ---
 description: >-
-  This scenario is mainly used to process signature information and can be used
-  for login verification.
+  This scenario is mainly used to sign information. that can be used for login
+  verification.
 ---
 
 # Sign Message
 
 ## Sign Message
 
-this method used for sign easy message.
+This method is used for sign message.
 
 ```typescript
 interface SignedData {
@@ -25,7 +25,7 @@ interface ProviderError extends Error {
     code: number;
     data?: unknown;
 }
-type signBody = {
+type SignMessageArgs = {
     message:string
 }
 
@@ -38,7 +38,7 @@ I accept the Auro Test zkApp Terms of Service: ${window.location.href}
 address: ${currentAccount}
 iat: ${new Date().getTime()}`;
 
-const signContent:signBody = {
+const signContent:SignMessageArgs = {
     message:content
 }
 
@@ -51,20 +51,17 @@ console.log(signResult)
 
 ## Sign Json Message
 
-this used for sign json data , wallet will format message.
+This method is used for sign JSON data , Auro Wallet will format message.
 
 ```typescript
-
 type JsonMessageData  = {
-  label:string
-  value:string
+    label:string
+    value:string
 }
-
 
 type SignJsonMessageArgs = {
-  readonly message: Array<JsonMessageData>
+    readonly message: Array<JsonMessageData>
 }
-
 
 const msgParams = [
     { label: "Label:", value: "Sign Confirm" },
@@ -92,36 +89,25 @@ const msgParams = [
       label: "Resources:",
       value: "https://docs.aurowallet.com/",
     },
-  ];
+    ];
+  
 const signResult:SignedData|ProviderError = await window.mina
     ?.signJsonMessage({
-      message: msgParams
+        message: msgParams
     })
     .catch((err: any) => err);
 
 console.log(signResult)
-
 ```
 
 ## Verify Message
 
-this methods used for verify signed Message.
+This methods is used for verify signed Message.
 
 ```typescript
-interface SignedData {
-  publicKey: string;
-  data: string;
-  signature: {
-    field: string;
-    scalar: string;
-  }
-}
-
-interface VerifyMessageArgs extends SignedData {}
-
 let verifyResult:boolean|ProviderError = await window.mina
-  ?.verifyMessage(verifyMessageBody)
-  .catch((err: any) => err);
+    ?.verifyMessage(verifyMessageBody)
+    .catch((err: any) => err);
   
 console.log(verifyResult)// if verify success,will return true
 ```

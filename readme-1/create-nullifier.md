@@ -9,7 +9,6 @@ description: Mainly used to create nullifiers.
     y: bigint;
 };
 
-
 type Nullifier = {
     publicKey: Group;
     public: {
@@ -30,8 +29,7 @@ interface ProviderError extends Error {
 }
 
 const signResult: Nullifier|ProviderError = await window.mina
-        .createNullifier({
-          message: "fields",
-        })
-        .catch((err: any) => err);
+    ?.createNullifier({
+        message: "fields",
+    }).catch((err: any) => err);
 </code></pre>

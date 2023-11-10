@@ -8,34 +8,33 @@ description: >-
 
 ### **accountsChanged**
 
-accountsChanged will be triggered when user switch connected account in Auro Wallet.
+When user switch account in Auro Wallet, `accountsChanged` will be triggered.
 
 ```javascript
-window.mina.on('accountsChanged', handler: (accounts: string[]) => void);
+window.mina?.on('accountsChanged', handler: (accounts: string[]) => void);
 ```
 
 ```javascript
-window.mina.on('accountsChanged', handler: (accounts: string[]) => {
+window.mina?.on('accountsChanged', handler: (accounts: string[]) => {
    console.log('connected accounts', accounts)
 });
 ```
 
 ### **chainChanged**
 
-chainChanged will be triggered when user switch chainId in Auro Wallet.
+When user switch chain in Auro Wallet, `chainChanged` will be triggered.&#x20;
 
 ```javascript
-
 type ChainInfoArgs ={
   chainId:string,
   name:string,
 }
 
-window.mina.on('chainChanged', handler: (chainInfo: ChainInfoArgs) => void);
+window.mina?.on('chainChanged', handler: (chainInfo: ChainInfoArgs) => void);
 ```
 
 ```javascript
-window.mina.on('chainChanged', handler: (chainInfo: ChainInfoArgs) => {
+window.mina?.on('chainChanged', handler: (chainInfo: ChainInfoArgs) => {
    console.log('current chain id', chainInfo.chainId)
    console.log('current chain name', chainInfo.name)
 });

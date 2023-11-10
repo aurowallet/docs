@@ -1,17 +1,14 @@
 ---
-description: >-
-  This scenario is mainly used to update zk transactions, including create
-  zk-contract and update zk-contracts.
+description: This scenario is mainly used to create zk-contract or update zk-contracts.
 ---
 
 # Send zk Transaction
 
 ## Update zk contract
 
-this method main use sign zk commond.
+This method is use to sign and broadcast zk transaction.
 
 ```typescript
-
 type SendTransactionResult = {
     hash: string;
 };
@@ -21,7 +18,6 @@ interface ProviderError extends Error {
     code: number;
     data?: unknown;
 }
-
 
 interface SendTransactionArgs {
     readonly transaction: any;

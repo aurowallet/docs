@@ -12,7 +12,7 @@ The output of numbers and string type numbers is the same in sign fields.
 
 ```typescript
 type SignFieldsArguments = {
-  readonly message: (string|number)[],
+    readonly message: (string|number)[],
 }
 ```
 
@@ -20,17 +20,16 @@ type SignFieldsArguments = {
 
 ```typescript
 type SignedFieldsData  = {
-  // sign data
-  data: (string|number)[],
-  // signature
-  signature:string
+    // sign data
+    data: (string|number)[],
+    // signature
+    signature:string
 }
 
-
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
 Promise<SignedFieldsData | ProviderError>
@@ -38,11 +37,11 @@ Promise<SignedFieldsData | ProviderError>
 
 ### Error
 
-|       |                                     |                               |
-| ----- | ----------------------------------- | ----------------------------- |
-| 1002  | user reject transaction             |                               |
-| 1001  | User disconnect, need connect first | can not get connected account |
-| 23001 | Origin dismatch                     |                               |
+|       |                                            |                                |
+| ----- | ------------------------------------------ | ------------------------------ |
+| 1001  | User disconnect, need connect Auro Wallet. | Can not get connected account. |
+| 1002  | The request was rejected by the user.      |                                |
+| 23001 | Origin dismatch.                           | Check origin safe.             |
 
 ## Example
 
@@ -65,11 +64,13 @@ await window.mina?.signFields({ message: [1,2,3] }).catch((err: any) => err);
     3
   ]
 }
+
 // can not get connect address
 {
   "code": 1001,
   "message": "User disconnect, please connect first"
 }
+
 // user reject 
 {
   "code": 1002,

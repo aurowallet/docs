@@ -34,5 +34,4 @@ await window.mina?.getAccounts();
 ["address"]
 // if not 
 [] 
-
 ```

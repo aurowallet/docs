@@ -1,5 +1,5 @@
 ---
-description: This method is used to switch chain to the wallet by chainId.
+description: This method is used to switch chain of Auro Wallet by chainId.
 ---
 
 # mina\_switchChain
@@ -8,26 +8,25 @@ description: This method is used to switch chain to the wallet by chainId.
 
 ```typescript
 type SwitchChainArgs = {
-  // target chain id. current support four types: mainnet , devnet , berkeley , testworld2 , 
-  readonly chainId: string
+    // target chain id. current support four types: mainnet , devnet , berkeley , testworld2 , 
+    readonly chainId: string
 }
-
 ```
 
 ### Result
 
 ```typescript
 type ChainInfoArgs ={
-  // current chain id , current support four types: mainnet , devnet , berkeley , testworld2 , 
-  chainId:string,
-  // current chain name
-  name:string,
+    // current chain id , current support four types: mainnet , devnet , berkeley , testworld2 , 
+    chainId:string,
+    // current chain name
+    name:string,
 }
 
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
 Promise<ChainInfoArgs | ProviderError>
@@ -35,21 +34,18 @@ Promise<ChainInfoArgs | ProviderError>
 
 ### Errors
 
-|       |                                       |                                                |
-| ----- | ------------------------------------- | ---------------------------------------------- |
-| 1002  | user reject transaction               |                                                |
-| 20003 | The parameters were invalid           | may cause by address, amount,fee type dismatch |
-| 20005 | Request already pending. Please wait. | chain action now support one at the same time. |
-| 23001 | Origin dismatch                       |                                                |
+|       |                                       |                                                    |
+| ----- | ------------------------------------- | -------------------------------------------------- |
+| 1002  | The request was rejected by the user. |                                                    |
+| 20005 | Request already pending. Please wait. | Chain action current support one at the same time. |
+| 23001 | Origin dismatch.                      | Check origin safe.                                 |
 
 ## Example
 
 ### Request
 
 ```typescript
-
 await window.mina?.switchChain({ chainId: "mainnet" }).catch((err: any) => err);
-
 ```
 
 ### Result
@@ -66,11 +62,7 @@ await window.mina?.switchChain({ chainId: "mainnet" }).catch((err: any) => err);
   "code": 1002,
   "message": "User rejected the request."
 }
-// params check error. there check :addres ,amount , fee
-{
-  "code": 20003,
-  "message": "Invalid method parameter(s)."
-}
+
 // have pending chain action
 {
   "code": 20005,

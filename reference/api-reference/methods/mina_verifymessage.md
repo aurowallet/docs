@@ -7,16 +7,16 @@ description: This method is used to verify the validity of the signature info.
 ### Params
 
 ```typescript
-interfaceVerifyMessageArgs{
-  // sign account address
-  publicKey: string;
-  // sign message
-  data: string;
-  // sign result
-  signature: {
-    field: string;
-    scalar: string;
-  }
+interface VerifyMessageArgs{
+    // sign account address
+    publicKey: string;
+    // sign message
+    data: string;
+    // sign result
+    signature: {
+        field: string;
+        scalar: string;
+    }
 }
 ```
 
@@ -24,9 +24,9 @@ interfaceVerifyMessageArgs{
 
 ```typescript
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
 Promise<boolean | ProviderError>
@@ -34,10 +34,10 @@ Promise<boolean | ProviderError>
 
 ### Errors
 
-|        |                 |   |
-| ------ | --------------- | - |
-| 20002 | Verify failed   |   |
-| 23001 | Origin dismatch |   |
+|       |                                |                                                                                            |
+| ----- | ------------------------------ | ------------------------------------------------------------------------------------------ |
+| 20002 | Signature verification failed. | This error is returned because an exception was thrown, please check the signature format. |
+| 23001 | Origin dismatch.               | Check origin safe.                                                                         |
 
 ## Example
 
@@ -54,7 +54,6 @@ let verifyMessageBody = {
 };
 
 await window.mina?.verifyMessage(verifyMessageBody).catch((err: any) => err);
-
 ```
 
 ### Result

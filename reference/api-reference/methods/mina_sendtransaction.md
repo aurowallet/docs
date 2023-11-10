@@ -1,13 +1,11 @@
 ---
-description: This method is used for zkApp contract transaction signature.
+description: This method is used for sign and broadcast zkapp transaction.
 ---
 
 # mina\_sendTransaction
 
-###
-
 {% hint style="info" %}
-you need to create zk commond in zkApp first, and sign with wallet.
+You need to create zk commond in zkApp first, then call Auro Wallet to sign and broadcast.
 {% endhint %}
 
 ### Params
@@ -15,15 +13,15 @@ you need to create zk commond in zkApp first, and sign with wallet.
 ```typescript
 
 interface SendTransactionArgs  {
-  // transaction is zkCommond that create by contract 
-  readonly transaction: any,
-  // option. 
-  readonly feePayer?: {
-    // option. custom fee. auro also provide advance to change fee
-    readonly fee?: number;
-    // option. custome memo. 
-    readonly memo?: string;
-  };
+    // transaction is zkCommond that create by contract 
+    readonly transaction: any,
+    // option. 
+    readonly feePayer?: {
+        // option. custom fee. auro also provide advance to change fee
+        readonly fee?: number;
+        // option. custome memo. 
+        readonly memo?: string;
+    };
 }
 ```
 
@@ -31,14 +29,14 @@ interface SendTransactionArgs  {
 
 ```typescript
 type SendTransactionResult = {
-  // sendPayment hash , you can query tx info by this hash
-  hash: string
+    // sendPayment hash , you can query tx info by this hash
+    hash: string
 }
 
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
 Promise<SendTransactionResult | ProviderError>
@@ -46,12 +44,12 @@ Promise<SendTransactionResult | ProviderError>
 
 ### Errors
 
-|       |                                      |                                                 |
-| ----- | ------------------------------------ | ----------------------------------------------- |
-| 1002  | user reject transaction.             |                                                 |
-| 1001  | User disconnect, need connect first. | can not get connected account.                  |
-| 20003 | The parameters were invalid.         | may cause by address, amount,fee type dismatch. |
-| 23001 | Origin dismatch.                     |                                                 |
+|       |                                            |                                |
+| ----- | ------------------------------------------ | ------------------------------ |
+| 1001  | User disconnect, need connect Auro Wallet. | Can not get connected account. |
+| 1002  | The request was rejected by the user.      |                                |
+| 20003 | The parameters were invalid.               | Please check address, fee.     |
+| 23001 | Origin dismatch.                           | Check origin safe.             |
 
 ## Example
 
@@ -62,14 +60,13 @@ const transactionJSON = {"feePayer":{"body":{"publicKey":"B62qiTKpEPjGTSHZrtM8uX
 const fee = ""
 const memo = ""
 
-await (window as any).mina?.sendTransaction({
-      transaction: transactionJSON,
-      feePayer: {
-        fee: fee,
-        memo: memo,
-      },
+await window.mina?.sendTransaction({
+        transaction: transactionJSON,
+        feePayer: {
+            fee: fee,
+            memo: memo,
+        },
     });
-
 ```
 
 ### Result
@@ -80,15 +77,15 @@ await (window as any).mina?.sendTransaction({
   "hash": "5JuVoDUC2kb3m1dQxG1B9Ar9VhZh4HuABGLgCoYnEJqZVhthk4TV"
 }
 
-// user reject 
-{
-  "code": 1002,
-  "message": "User rejected the request."
-}
 // can not get connect address
 {
   "code": 1001,
   "message": "User disconnect, please connect first"
+}
+// user reject 
+{
+  "code": 1002,
+  "message": "User rejected the request."
 }
 // params check error. there check :addres ,amount , fee
 {

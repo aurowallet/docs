@@ -1,5 +1,5 @@
 ---
-description: Scenarios for interact chain with wallets.
+description: Scenarios for interact chain with Auro Wallet.
 ---
 
 # Add or Switch Chain
@@ -15,7 +15,7 @@ const network: ChainInfoArgs = await window.mina?.requestNetwork()
 
 ## `SwitchChain`
 
-zkApp can switch chain throw `switchChain`.
+zkApp can switch chain by `switchChain`.
 
 {% hint style="success" %}
 current only support these chain Id:
@@ -39,29 +39,28 @@ interface ProviderError extends Error {
 }
 
 const switchResult:ChainInfoArgs|ProviderError = await window.mina
-      ?.switchChain({
+    ?.switchChain({
         chainId: chainId.trim(),
-      })
-      .catch((err: any) => err);
+    }).catch((err: any) => err);
 ```
 
 ## Add Chain
 
-If want to customize the adding chain or switch chain, can use this method. When the url has been added, it will request to switch to chain corresponding to the URL.
+If want to customize the adding chain or switch chain, can use this method. When the URL has been added, it will request to switch to chain corresponding to the URL.
 
 ```typescript
-
 const addInfo = {
-  url: encodeURIComponent("graphQLUrl"),
+  url: encodeURIComponent("graphQLURL"),
   name: "networkName",
 }
+
 const addResult:ChainInfoArgs|ProviderError = await window.mina?.addChain(addInfo)
   .catch((err: any) => err);
 ```
 
 ## Chain Event
 
-This method is used to monitor chain changes. When the wallet chain changes, the monitoring will be triggered.
+This method is used to listen chain changes. When the Auro Wallet chain changes, the event will be triggered.
 
 ```typescript
 window.mina?.on("chainChanged",(chainInfo: ChainInfoArgs) => {

@@ -1,5 +1,5 @@
 ---
-description: This method is used by zkApp to call wallet stake delegation.
+description: This method is used by zkApp to call Auro Wallet stake delegation.
 ---
 
 # mina\_sendStakeDelegation
@@ -7,13 +7,13 @@ description: This method is used by zkApp to call wallet stake delegation.
 ### Params
 
 ```typescript
-type SendLegacyStakeDelegationArgs  = {
-  // to is the target block Producer address. require base58 address.
-  readonly to: string,
-  // option. custom fee. Auro Wallet also provide advance to change fee
-  readonly fee?: number,
-  // option. custome memo. 
-  readonly memo?:string
+type SendStakeDelegationArgs  = {
+    // to is the target block Producer address. require base58 address.
+    readonly to: string,
+    // option. custom fee. Auro Wallet also provide advance to change fee
+    readonly fee?: number,
+    // option. custome memo. 
+    readonly memo?:string
 }
 
 ```
@@ -21,28 +21,28 @@ type SendLegacyStakeDelegationArgs  = {
 ### Result
 
 ```typescript
-type BroadcastTransactionResult = {
-  // sendPayment hash , you can query tx info by this hash
-  hash: string
+type SendTransactionResult = {
+    // sendPayment hash , you can query tx info by this hash
+    hash: string
 }
 
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
-Promise<BroadcastTransactionResult | ProviderError>
+Promise<SendTransactionResult | ProviderError>
 ```
 
 ### Errors
 
-|       |                                     |                                                |
-| ----- | ----------------------------------- | ---------------------------------------------- |
-| 1002  | user reject transaction             |                                                |
-| 1001  | User disconnect, need connect first | can not get connected account                  |
-| 20003 | The parameters were invalid         | may cause by address, amount,fee type dismatch |
-| 23001 | Origin dismatch                     |                                                |
+|       |                                            |                                |
+| ----- | ------------------------------------------ | ------------------------------ |
+| 1001  | User disconnect, need connect Auro Wallet. | Can not get connected account. |
+| 1002  | user reject transaction.                   |                                |
+| 20003 | The parameters were invalid.               | Please check address, fee.     |
+| 23001 | Origin dismatch.                           | Check origin safe.             |
 
 ## Example
 
@@ -53,13 +53,11 @@ const vaildatorAddress = "B62qq3TQ8AP7MFYPVtMx5tZGF3kWLJukfwG1A1RGvaBW1jfTPTkDBW
 const fee = 0.011
 const memo = ""
 
-await window.mina?.sendLegacyStakeDelegation({
+await window.mina?.sendStakeDelegation({
     to: vaildatorAddress,
-    fee: fee,
-    memo: memo,// option , if not use ,can delet this params
-})
-.catch((err: any) => err);
-
+    fee: fee,    // option, if not use ,can delet this params
+    memo: memo,    // option, if not use ,can delet this params
+}).catch((err: any) => err);
 ```
 
 ### Result

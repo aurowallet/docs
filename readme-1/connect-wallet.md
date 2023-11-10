@@ -4,8 +4,6 @@ description: Scenarios for connect wallets and request accounts.
 
 # Connect Wallet
 
-
-
 {% hint style="info" %}
 When using the API, you need to ensure that the browser has successfully obtained the **`window.mina`** object.
 {% endhint %}
@@ -22,17 +20,17 @@ if (typeof window.mina !== 'undefined') {
 
 ## Request Account
 
-Interacting with Auro Wallet require connect account. This method returns an array when user confirm authorizes, which contains address that authenticated. The current array returns one address at a time. Returns a ProviderError when user reject authorization.
+Interactive with Auro Wallet require connect account. This method returns an array when user confirm authorizes, which contains address that authenticated. The current array returns one address at a time. Returns a ProviderError when user reject authorization.
 
 ```typescript
-const account:string[]|ProviderError = await window?.mina.requestAccounts()
-      .catch((err: any) => err);
+const account:string[]|ProviderError = await window.mina.requestAccounts()
+    .catch((err: any) => err);
 
 console.log(account)
 ```
 
 {% hint style="info" %}
-**requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you  want to request account without popup window . you can use \
+**requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you want to request account without popup window . you can use\
 [getAccounts](../reference/api-reference/methods/#getaccounts)
 {% endhint %}
 
@@ -48,6 +46,6 @@ This method is used to monitor account changes. When the account changes, the mo
 
 ```javascript
 window.mina?.on("accountsChanged", (accounts: string[]) => {
-      console.log(accounts);
+    console.log(accounts);
 });
 ```

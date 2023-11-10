@@ -15,9 +15,9 @@ null
 
 ```typescript
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
 // string[] will contain the connected account address
@@ -26,7 +26,7 @@ Promise<string[] | ProviderError>
 
 ### Error
 
-<table><thead><tr><th></th><th width="332.3333333333333"></th><th></th></tr></thead><tbody><tr><td>1002</td><td>The request was rejected by the use</td><td></td></tr><tr><td>20001</td><td>No wallet found</td><td>need create or restore wallet first</td></tr><tr><td>23001</td><td>Origin dismatch</td><td>check origin safe</td></tr></tbody></table>
+<table><thead><tr><th></th><th width="332.3333333333333"></th><th></th></tr></thead><tbody><tr><td>1002</td><td>The request was rejected by the user.</td><td></td></tr><tr><td>20001</td><td>No account found.</td><td>Need create or restore account in Auro Wallet first.</td></tr><tr><td>23001</td><td>Origin dismatch.</td><td>Check origin safe.</td></tr></tbody></table>
 
 ## Example
 
@@ -34,7 +34,6 @@ Promise<string[] | ProviderError>
 
 ```typescript
 await window.mina.requestAccounts().catch((err: any) => err);
-
 ```
 
 ### Result
@@ -46,7 +45,7 @@ await window.mina.requestAccounts().catch((err: any) => err);
   "message": "User rejected the request."
 }
 
-success result
+// success result
 [
   "B62qpjxUpgdjzwQfd8q2gzxi99wN7SCgmofpvw27MBkfNHfHoY2VH32"
 ]

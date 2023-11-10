@@ -8,44 +8,44 @@ description: This method is used to sign message.
 
 ```typescript
 type SignMessageArgs = {
-  // need sign Message
-  readonly message: string
+    // need sign Message
+    readonly message: string
 }
-
 ```
 
 ### Result
 
-<pre class="language-typescript"><code class="lang-typescript"><strong>
-</strong>interface SignedData {
-  // sign account address
-  publicKey: string;
-  // sign message
-  data: string;
-  // sign result
-  signature: {
-    field: string;
-    scalar: string;
-  }
+```typescript
+
+interface SignedData {
+    // sign account address
+    publicKey: string;
+    // sign message
+    data: string;
+    // sign result
+    signature: {
+        field: string;
+        scalar: string;
+    }
 }
 
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
 
-Promise&#x3C;SignedData | ProviderError> 
-</code></pre>
+Promise<SignedData | ProviderError> 
+```
 
 ### Errors
 
-|        |                                     |                               |
-| ------ | ----------------------------------- | ----------------------------- |
-| 1002   | user reject transaction             |                               |
-| 1001   | User disconnect, need connect first | can not get connected account |
-| 23001 | Origin dismatch                     |                               |
+|       |                                            |                                |
+| ----- | ------------------------------------------ | ------------------------------ |
+| 1001  | User disconnect, need connect Auro Wallet. | Can not get connected account. |
+| 1002  | The request was rejected by the user.      |                                |
+| 23001 | Origin dismatch.                           | Check origin safe.             |
 
 ## Example
 
@@ -82,10 +82,10 @@ await window.mina?.signMessage({ message: content }).catch((err: any) => err);
   "code": 1001,
   "message": "User disconnect, please connect first"
 }
+
 // user reject 
 {
   "code": 1002,
   "message": "User rejected the request."
 }
 ```
-

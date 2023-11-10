@@ -1,7 +1,7 @@
 ---
 description: >-
-  This method is used by zkApp to call wallet sendPayment (current supports main
-  coin send).
+  This method is used to call wallet send payment (current support send MINA )
+  by zkApp.
 ---
 
 # mina\_sendPayment
@@ -9,43 +9,42 @@ description: >-
 ### Params
 
 ```typescript
-interface SendLegacyPaymentArgs  {
-  // to is the target address. require base58 address. 
-  readonly to: string
-  // amount is the send amount , with decimal. like 1.1 MINA
-  readonly amount: number
-  // option. custom fee. Auro Wallet also provide advance to change fee
-  readonly fee?: number
-  // option. custome memo. 
-  readonly memo?:string
+interface SendPaymentArgs  {
+    // to is the target address. require base58 address. 
+    readonly to: string
+    // amount is the send amount , with decimal. like 1.1 MINA
+    readonly amount: number
+    // option. custom fee. Auro Wallet also provide advance to change fee
+    readonly fee?: number
+    // option. custome memo. 
+    readonly memo?:string
 }
-
 ```
 
 ### Result
 
-<pre class="language-typescript"><code class="lang-typescript"><strong>type BroadcastTransactionResult = {
-</strong>  // sendPayment hash , you can query tx info by this hash
-  hash: string
+<pre class="language-typescript"><code class="lang-typescript"><strong>type SendTransactionResult = {
+</strong>    // sendPayment hash , you can query tx info by this hash
+    hash: string
 }
 
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
-Promise&#x3C;BroadcastTransactionResult | ProviderError>
+Promise&#x3C;SendTransactionResult | ProviderError>
 </code></pre>
 
 ### Errors
 
-|       |                                     |                                                |
-| ----- | ----------------------------------- | ---------------------------------------------- |
-| 1002  | user reject transaction             |                                                |
-| 1001  | User disconnect, need connect first | can not get connected account                  |
-| 20003 | The parameters were invalid         | may cause by address, amount,fee type dismatch |
-| 23001 | Origin dismatch                     |                                                |
+|       |                                            |                                    |
+| ----- | ------------------------------------------ | ---------------------------------- |
+| 1001  | User disconnect, need connect Auro Wallet. | Can not get connected account.     |
+| 1002  | The request was rejected by the user.      |                                    |
+| 20003 | The parameters were invalid.               | Please check address, amount, fee. |
+| 23001 | Origin dismatch                            | Check origin safe.                 |
 
 ## Example
 
@@ -57,13 +56,12 @@ const receiveAddress = "B62qpjxUpgdjzwQfd8q2gzxi99wN7SCgmofpvw27MBkfNHfHoY2VH32"
 const fee = 0.012
 const memo = "Auro Wallet"
 
-await window.mina?.sendLegacyPayment({
+await window.mina?.sendPayment({
         amount: amount,
         to: receiveAddress,
         fee: fee,
         memo: memo,
-      })
-      .catch((err: any) => err);
+    }).catch((err: any) => err);
 ```
 
 ### Result

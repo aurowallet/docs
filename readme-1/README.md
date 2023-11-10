@@ -1,13 +1,9 @@
 ---
-description: >-
-  Introduced all the methods provided by Mina Provider and how zkApp can better
-  work with Auro Wallet.
+description: Here are some scenarios used, you can find demo of use here.
 ---
 
 # How to
 
-
-
 {% hint style="info" %}
-Here are only the APIs for some scenarios. For the complete API, please see the [API Reference](../reference/api-reference/)
+Here are only the APIs for some scenarios. For the full API, please see the [API Reference](../reference/api-reference/)
 {% endhint %}

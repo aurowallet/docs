@@ -7,16 +7,15 @@ description: This method is used to sign Json message.
 ### Params
 
 ```typescript
-
 type JsonMessageData  = {
-  // show title
-  label:string
-  // show value
-  value:string
+    // show title
+    label:string
+    // show value
+    value:string
 }
 
 export type SignJsonMessageArgs = {
-  readonly message: Array<JsonMessageData>
+    readonly message: Array<JsonMessageData>
 }
 
 ```
@@ -25,21 +24,21 @@ export type SignJsonMessageArgs = {
 
 ```typescript
 interface SignedData {
-  // sign account address
-  publicKey: string;
-  // sign message
-  data: string;
-  // sign result
-  signature: {
-    field: string;
-    scalar: string;
-  }
+    // sign account address
+    publicKey: string;
+    // sign message
+    data: string;
+    // sign result
+    signature: {
+        field: string;
+        scalar: string;
+    }
 }
 
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
 
@@ -48,11 +47,11 @@ Promise<SignedData | ProviderError>
 
 ### Errors
 
-|       |                                      |                               |
-| ----- | ------------------------------------ | ----------------------------- |
-| 1002  | user reject transaction              |                               |
-| 1001  | User disconnect, need connect first. | can not get connected account |
-| 23001 | Origin dismatch                      |                               |
+|       |                                            |                                |
+| ----- | ------------------------------------------ | ------------------------------ |
+| 1001  | User disconnect, need connect Auro Wallet. | Can not get connected account. |
+| 1002  | The request was rejected by the user.      |                                |
+| 23001 | Origin dismatch.                           | Check origin safe.             |
 
 ## Example
 
@@ -60,32 +59,33 @@ Promise<SignedData | ProviderError>
 
 ```typescript
 const msgParams = [
-      { label: "Label:", value: "Sign Confirm" },
-      {
-        label: "Message:",
-        value: "Click to sign in and accept the Terms of Service",
-      },
-      {
-        label: "URI:",
-        value: "window.location.href",
-      },
-      {
-        label: "Chain ID:",
-        value: network.chainId,
-      },
-      {
-        label: "Chain Name:",
-        value: network.name,
-      },
-      {
-        label: "Issued At:",
-        value: new Date().getTime(),
-      },
-      {
-        label: "Resources:",
-        value: "https://docs.aurowallet.com/",
-      },
-    ];
+    { label: "Label:", value: "Sign Confirm" },
+    {
+      label: "Message:",
+      value: "Click to sign in and accept the Terms of Service",
+    },
+    {
+      label: "URI:",
+      value: "window.location.href",
+    },
+    {
+      label: "Chain ID:",
+      value: network.chainId,
+    },
+    {
+      label: "Chain Name:",
+      value: network.name,
+    },
+    {
+      label: "Issued At:",
+      value: new Date().getTime(),
+    },
+    {
+      label: "Resources:",
+      value: "https://docs.aurowallet.com/",
+    },
+];
+
 await window.mina?.signJsonMessage({ message: msgParams }).catch((err: any) => err);
 ```
 
@@ -107,6 +107,7 @@ await window.mina?.signJsonMessage({ message: msgParams }).catch((err: any) => e
   "code": 1001,
   "message": "User disconnect, please connect first"
 }
+
 // user reject 
 {
   "code": 1002,

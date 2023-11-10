@@ -8,7 +8,7 @@ description: Mainly used to create nullifiers.
 
 ```typescript
 type CreateNullifierArgs = {
-  readonly message: bigint[]
+    readonly message: bigint[]
 }
 ```
 
@@ -16,27 +16,27 @@ type CreateNullifierArgs = {
 
 ```typescript
 type Group = {
-  x: bigint;
-  y: bigint;
+    x: bigint;
+    y: bigint;
 };
 
 export type Nullifier = {
-  publicKey: Group;
-  public: {
-    nullifier: Group;
-    s: bigint;
-  };
-  private: {
-    c: bigint;
-    g_r: Group;
-    h_m_pk_r: Group;
-  };
+    publicKey: Group;
+    public: {
+        nullifier: Group;
+        s: bigint;
+    };
+    private: {
+        c: bigint;
+        g_r: Group;
+        h_m_pk_r: Group;
+    };
 };
 
 interface ProviderError extends Error {
-  message: string; // error message
-  code: number; // error code 
-  data?: unknown;// error body 
+    message: string; // error message
+    code: number; // error code 
+    data?: unknown;// error body 
 }
 
 Promise<Nullifier | ProviderError>
@@ -44,11 +44,11 @@ Promise<Nullifier | ProviderError>
 
 ### Errors
 
-|       |                                      |                                |
-| ----- | ------------------------------------ | ------------------------------ |
-| 1002  | user reject transaction              |                                |
-| 1001  | User disconnect, need connect first. | can not get connected account. |
-| 23001 | Origin dismatch                      |                                |
+|       |                                            |                                |
+| ----- | ------------------------------------------ | ------------------------------ |
+| 1001  | User disconnect, need connect Auro Wallet. | Can not get connected account. |
+| 1002  | The request was rejected by the user.      |                                |
+| 23001 | Origin dismatch.                           | Check origin safe.             |
 
 ## Example
 
@@ -56,7 +56,7 @@ Promise<Nullifier | ProviderError>
 
 ```typescript
 const signContent = [1,2,3]
-await window.mina.createNullifier({ message: signContent }).catch((err: any) => err);
+await window.mina?.createNullifier({ message: signContent }).catch((err: any) => err);
 ```
 
 ### Result
@@ -98,6 +98,7 @@ await window.mina.createNullifier({ message: signContent }).catch((err: any) => 
   "code": 1001,
   "message": "User disconnect, please connect first"
 }
+
 // user reject 
 {
   "code": 1002,
