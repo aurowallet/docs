@@ -22,7 +22,7 @@ if return failed info , zkApp can get error code.
 ```typescript
 * code 1001  User disconnect, need connect first.
 * code 1002  The request was rejected by the user.
-* code 20001 No wallet found.
+* code 20001 Can not find account, may need create or restore in Auro Wallet first.
 * code 20002 Verify failed.
 * code 20003 The parameters were invalid.
 * code 20004 Not support chain.

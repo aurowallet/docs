@@ -42,7 +42,7 @@ console.log(account);
 
 ## Account Event
 
-This method is used to monitor account changes. When the account changes, the monitoring will be triggered.
+This method is used to monitor account changes. When the account changes, the monitoring will be trigger.
 
 ```typescript
 window.mina?.on("accountsChanged", (accounts: string[]) => {
