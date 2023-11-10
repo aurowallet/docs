@@ -1,5 +1,5 @@
 ---
-description: This method is used for sign and broadcast zkapp transaction.
+description: This method is used for sign and broadcast zkApp transaction.
 ---
 
 # mina\_sendTransaction
