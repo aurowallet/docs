@@ -13,7 +13,7 @@ You need to create zk commond in zkApp first, then call Auro Wallet to sign and 
 ```typescript
 interface SendTransactionArgs  {
     // transaction is zk commond that create by contract.
-    readonly transaction: any,
+    readonly transaction: string | object;
     // option. 
     readonly feePayer?: {
         // option. Auro Wallet also provide advance option to change fee.

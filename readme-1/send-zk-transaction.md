@@ -20,7 +20,7 @@ interface ProviderError extends Error {
 }
 
 interface SendTransactionArgs {
-    readonly transaction: any;
+    readonly transaction: string | object;
     readonly feePayer?: {
         readonly fee?: number;
         readonly memo?: string;
