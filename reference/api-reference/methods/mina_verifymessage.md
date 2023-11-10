@@ -8,11 +8,11 @@ description: This method is used to verify the validity of the signature info.
 
 ```typescript
 interface VerifyMessageArgs{
-    // sign account address
+    // sign account address.
     publicKey: string;
-    // sign message
+    // sign message.
     data: string;
-    // sign result
+    // sign result.
     signature: {
         field: string;
         scalar: string;
@@ -24,9 +24,9 @@ interface VerifyMessageArgs{
 
 ```typescript
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body. 
 }
 
 Promise<boolean | ProviderError>
@@ -59,10 +59,10 @@ await window.mina?.verifyMessage(verifyMessageBody).catch((err: any) => err);
 ### Result
 
 ```typescript
-//successful result
+// successful result.
 false | true
 
-// verify failed
+// verify failed.
 {
   "message": "Verify failed",
   "code": 20002

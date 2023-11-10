@@ -30,21 +30,21 @@ console.log(account)
 ```
 
 {% hint style="info" %}
-**requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you want to request account without popup window . you can use\
-[getAccounts](../reference/api-reference/methods/#getaccounts)
+**requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you want to request account without popup window. you can use\
+[getAccounts](../reference/api-reference/methods/#getaccounts).
 {% endhint %}
 
 ```javascript
 let account = await window.mina?.getAccounts();
 
-console.log(account)
+console.log(account);
 ```
 
 ## Account Event
 
 This method is used to monitor account changes. When the account changes, the monitoring will be triggered.
 
-```javascript
+```typescript
 window.mina?.on("accountsChanged", (accounts: string[]) => {
     console.log(accounts);
 });

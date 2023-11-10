@@ -26,8 +26,8 @@ let data: SendTransactionResult|ProviderError = await window.mina
     ?.sendPayment({
         amount: amount,
         to: receiveAddress,
-        fee: fee,  // option
-        memo: memo,  // option
+        fee: fee, // option
+        memo: memo, // option
     })
     .catch((err: any) => err);
 ```
@@ -40,7 +40,7 @@ This method is used to call stake delegation.
 let data: SendTransactionResult|ProviderError = await window.mina
     ?.sendStakeDelegation({
         to: vaildatorAddress,
-        fee: fee,  // option
-        memo: memo,  // option
+        fee: fee, // option
+        memo: memo, // option
     }).catch((err: any) => err);
 ```

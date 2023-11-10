@@ -20,16 +20,16 @@ type SignFieldsArguments = {
 
 ```typescript
 type SignedFieldsData  = {
-    // sign data
+    // sign data.
     data: (string|number)[],
-    // signature
+    // signature.
     signature:string
 }
 
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body.
 }
 
 Promise<SignedFieldsData | ProviderError>
@@ -54,7 +54,7 @@ await window.mina?.signFields({ message: [1,2,3] }).catch((err: any) => err);
 ### Result
 
 ```typescript
-// success 
+// successful result
 {
   "signature": "7mX4QDZBoq3eTfLhvoWzBBQnUhxBfVCUcXwnPsDoEqcpiGacuoeYq3i9HpMfFUvvTz5qG4C2zqCDDBoB5KPamAko15m4wMiS",
   "publicKey": "B62qr2zNMypNKXmzMYSVotChTBRfXzHRtshvbuEjAQZLq6aEa8RxLyD",
@@ -65,15 +65,15 @@ await window.mina?.signFields({ message: [1,2,3] }).catch((err: any) => err);
   ]
 }
 
-// can not get connect address
+// can not get connect address.
 {
   "code": 1001,
-  "message": "User disconnect, please connect first"
+  "message": "User disconnect, please connect first. "
 }
 
-// user reject 
+// user reject.
 {
   "code": 1002,
-  "message": "User rejected the request."
+  "message": "User rejected the request. "
 }
 ```

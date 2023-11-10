@@ -29,16 +29,16 @@ interface SendTransactionArgs {
 
 const updateResult:SendTransactionResult| ProviderError= await window.mina?
     .sendTransaction({
-      transaction: transactionJSON,// this is zk commond ,create by o1js
-      feePayer: {//option
+      transaction: transactionJSON, // this is zk commond, create by zkApp.
+      feePayer: { // option.
         fee: fee,
-        memo: memo,
+        memo: memo
       },
     });
 
-console.log(updateResult)
+console.log(updateResult);
 ```
 
 {% hint style="info" %}
-Here is an demo of update a zk contract. To create a zkApp contract, you need to use [o1js](https://www.npmjs.com/package/o1js) to sign first, and then use Auro Wallet to sign the result of o1js signed.The created zkApp contract demo is [here](https://github.com/aurowallet/test-zkapp/blob/feature/zk/ui/src/components/HomeComponents/SignTransactionBox.tsx#L263)
+Here is an demo of update a zk contract. To create a zkApp contract, you need to use [o1js](https://www.npmjs.com/package/o1js) to sign first, then use Auro Wallet to sign the result of o1js signed. The created zkApp contract demo is [here](https://github.com/aurowallet/test-zkapp/blob/feature/zk/ui/src/components/HomeComponents/SignTransactionBox.tsx#L263).
 {% endhint %}

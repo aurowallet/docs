@@ -8,7 +8,7 @@ description: This method is used to sign message.
 
 ```typescript
 type SignMessageArgs = {
-    // need sign Message
+    // The message that need to sign.
     readonly message: string
 }
 ```
@@ -16,13 +16,12 @@ type SignMessageArgs = {
 ### Result
 
 ```typescript
-
 interface SignedData {
-    // sign account address
+    // sign account address.
     publicKey: string;
-    // sign message
+    // sign message.
     data: string;
-    // sign result
+    // sign result.
     signature: {
         field: string;
         scalar: string;
@@ -30,9 +29,9 @@ interface SignedData {
 }
 
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body. 
 }
 
 
@@ -67,7 +66,7 @@ await window.mina?.signMessage({ message: content }).catch((err: any) => err);
 ### Result
 
 ```typescript
-// success result
+// successful result.
 {
   "signature": {
     "field": "13468724101429370746602596170094552502200193721398063751467629418902449650534",
@@ -77,15 +76,15 @@ await window.mina?.signMessage({ message: content }).catch((err: any) => err);
   "data": "Click \"Sign\" to sign in. No password needed!\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nI accept the Auro Test zkApp Terms of Service: http://localhost:3000/\n\naddress: \niat: 1699294808439"
 }
 
-// can not get connect address
+// can not get connect address.
 {
   "code": 1001,
-  "message": "User disconnect, please connect first"
+  "message": "User disconnect, please connect first. "
 }
 
-// user reject 
+// user reject.
 {
   "code": 1002,
-  "message": "User rejected the request."
+  "message": "User rejected the request. "
 }
 ```

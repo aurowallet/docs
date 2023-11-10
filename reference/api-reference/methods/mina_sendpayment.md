@@ -1,7 +1,7 @@
 ---
 description: >-
-  This method is used to call wallet send payment (current support send MINA )
-  by zkApp.
+  This method is used to call  Auro Wallet send payment (current support send
+  MINA ) by zkApp.
 ---
 
 # mina\_sendPayment
@@ -12,11 +12,11 @@ description: >-
 interface SendPaymentArgs  {
     // to is the target address. require base58 address. 
     readonly to: string
-    // amount is the send amount , with decimal. like 1.1 MINA
+    // amount is the send amount, with decimal. e.g. 1.1
     readonly amount: number
-    // option. custom fee. Auro Wallet also provide advance to change fee
+    // option. Auro Wallet also provide advance option to change fee.
     readonly fee?: number
-    // option. custome memo. 
+    // option.
     readonly memo?:string
 }
 ```
@@ -24,14 +24,14 @@ interface SendPaymentArgs  {
 ### Result
 
 <pre class="language-typescript"><code class="lang-typescript"><strong>type SendTransactionResult = {
-</strong>    // sendPayment hash , you can query tx info by this hash
+</strong>    // broadcast hash, you can query tx info by this hash.
     hash: string
 }
 
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body. 
 }
 
 Promise&#x3C;SendTransactionResult | ProviderError>
@@ -67,24 +67,26 @@ await window.mina?.sendPayment({
 ### Result
 
 ```typescript
-// successful result
+// successful result.
 {
   "hash": "CkpZj7QwDkfzoyPfMiJj9zTC6R41Sbh9fY4yvKsSYM9zjyyTUDwW9"
 }
 
-// user reject 
+// user reject.
 {
   "code": 1002,
-  "message": "User rejected the request."
+  "message": "User rejected the request. "
 }
-// can not get connect address
+
+// can not get connect address.
 {
   "code": 1001,
-  "message": "User disconnect, please connect first"
+  "message": "User disconnect, please connect first. "
 }
-// params check error. there check :addres ,amount , fee
+
+// params check error. there check addres, amount and fee.
 {
   "code": 20003,
-  "message": "Invalid method parameter(s)."
+  "message": "Invalid method parameter(s). "
 }
 ```

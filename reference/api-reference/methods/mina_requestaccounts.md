@@ -15,12 +15,12 @@ null
 
 ```typescript
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body. 
 }
 
-// string[] will contain the connected account address
+// string[] will contain the connected account address.
 Promise<string[] | ProviderError>
 ```
 
@@ -39,13 +39,13 @@ await window.mina.requestAccounts().catch((err: any) => err);
 ### Result
 
 ```typescript
-// user reject
+// user reject.
 {
   "code": 1002,
-  "message": "User rejected the request."
+  "message": "User rejected the request. "
 }
 
-// success result
+// successful result.
 [
   "B62qpjxUpgdjzwQfd8q2gzxi99wN7SCgmofpvw27MBkfNHfHoY2VH32"
 ]

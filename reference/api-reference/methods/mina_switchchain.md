@@ -8,7 +8,7 @@ description: This method is used to switch chain of Auro Wallet by chainId.
 
 ```typescript
 type SwitchChainArgs = {
-    // target chain id. current support four types: mainnet , devnet , berkeley , testworld2 , 
+    // Target chain id. current support four types: mainnet, devnet, berkeley, testworld2.
     readonly chainId: string
 }
 ```
@@ -17,16 +17,16 @@ type SwitchChainArgs = {
 
 ```typescript
 type ChainInfoArgs ={
-    // current chain id , current support four types: mainnet , devnet , berkeley , testworld2 , 
+    // current chain id, current support four types: mainnet, devnet, berkeley, testworld2.
     chainId:string,
-    // current chain name
+    // current chain name.
     name:string,
 }
 
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body. 
 }
 
 Promise<ChainInfoArgs | ProviderError>
@@ -51,21 +51,21 @@ await window.mina?.switchChain({ chainId: "mainnet" }).catch((err: any) => err);
 ### Result
 
 ```typescript
-// success
+// successful result.
 {
   "chainId": "mainnet",
   "name": "testchain"
 }
 
-// user reject 
+// user reject.
 {
   "code": 1002,
-  "message": "User rejected the request."
+  "message": "User rejected the request. "
 }
 
-// have pending chain action
+// have pending chain action.
 {
   "code": 20005,
-  "message": "Request already pending. Please wait."
+  "message": "Request already pending. Please wait. "
 }
 ```

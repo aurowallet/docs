@@ -28,4 +28,4 @@ Dive a little deeper and start exploring our API reference to get an idea of eve
 [api-reference](reference/api-reference/)
 {% endcontent-ref %}
 
-If you want to help us maintain the documentation. please refer to: [Auro Wallet/docs](https://github.com/aurowallet/docs)
+If you want to help us maintain the documentation. please refer to: [Auro Wallet/docs](https://github.com/aurowallet/docs).

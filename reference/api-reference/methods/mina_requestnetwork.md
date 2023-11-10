@@ -12,7 +12,7 @@ null
 
 ```typescript
 type ChainInfoArgs ={
-    // current chain id ,now will return mainnet , devnet , berkeley , testworld2 , 
+    // current chain id, now will return mainnet, devnet, berkeley, testworld2.
     chainId:string,
     // current chain name. The default node name is fixed, 
     // and the custom added ones are user-defined.

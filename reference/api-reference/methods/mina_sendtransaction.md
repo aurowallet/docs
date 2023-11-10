@@ -11,15 +11,14 @@ You need to create zk commond in zkApp first, then call Auro Wallet to sign and 
 ### Params
 
 ```typescript
-
 interface SendTransactionArgs  {
-    // transaction is zkCommond that create by contract 
+    // transaction is zkCommond that create by contract.
     readonly transaction: any,
     // option. 
     readonly feePayer?: {
-        // option. custom fee. auro also provide advance to change fee
+        // option. Auro Wallet also provide advance option to change fee.
         readonly fee?: number;
-        // option. custome memo. 
+        // option.
         readonly memo?: string;
     };
 }
@@ -29,14 +28,14 @@ interface SendTransactionArgs  {
 
 ```typescript
 type SendTransactionResult = {
-    // sendPayment hash , you can query tx info by this hash
+    // broadcast hash, you can query tx info by this hash.
     hash: string
 }
 
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body. 
 }
 
 Promise<SendTransactionResult | ProviderError>
@@ -72,22 +71,24 @@ await window.mina?.sendTransaction({
 ### Result
 
 ```typescript
-// successful result. this is testworld2
+// successful result.
 {
   "hash": "5JuVoDUC2kb3m1dQxG1B9Ar9VhZh4HuABGLgCoYnEJqZVhthk4TV"
 }
 
-// can not get connect address
+// can not get connect address.
 {
   "code": 1001,
   "message": "User disconnect, please connect first"
 }
-// user reject 
+
+// user reject.
 {
   "code": 1002,
   "message": "User rejected the request."
 }
-// params check error. there check :addres ,amount , fee
+
+// params check error. there check addres, fee.
 {
   "code": 20003,
   "message": "Invalid method parameter(s)."

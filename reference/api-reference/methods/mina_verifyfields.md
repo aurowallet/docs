@@ -8,9 +8,9 @@ description: This method is used to verify the signature results of fields.
 
 ```typescript
 interface VerifyFieldsArguments {
-    // sign publicKey
+    // sign publicKey.
     publicKey: string,
-    // sign fields
+    // sign fields.
     data: (string|number)[],
     signature:string
 }
@@ -20,9 +20,9 @@ interface VerifyFieldsArguments {
 
 ```typescript
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body.
 }
 
 Promise<boolean | ProviderError> 
@@ -52,10 +52,10 @@ await window.mina?.verifyFields(verifyMessageBody).catch((err: any) => err);
 ### Result
 
 ```typescript
-//successful result
+// successful result.
 false | true
 
-// verify failed
+// verify failed.
 {
   "message": "Verify failed",
   "code": 20002

@@ -8,7 +8,7 @@ description: >-
 
 ### **accountsChanged**
 
-When user switch account in Auro Wallet, `accountsChanged` will be triggered.
+When user switch account in Auro Wallet, `accountsChanged` will be trigger.
 
 ```javascript
 window.mina?.on('accountsChanged', handler: (accounts: string[]) => void);
@@ -22,7 +22,7 @@ window.mina?.on('accountsChanged', handler: (accounts: string[]) => {
 
 ### **chainChanged**
 
-When user switch chain in Auro Wallet, `chainChanged` will be triggered.&#x20;
+When user switch chain in Auro Wallet, `chainChanged` will be trigger.&#x20;
 
 ```javascript
 type ChainInfoArgs ={

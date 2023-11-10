@@ -8,28 +8,27 @@ description: This method is used by zkApp to call Auro Wallet stake delegation.
 
 ```typescript
 type SendStakeDelegationArgs  = {
-    // to is the target block Producer address. require base58 address.
+    // to is block producer address. require base58 address.
     readonly to: string,
-    // option. custom fee. Auro Wallet also provide advance to change fee
+    // option. Auro Wallet also provide advance option to change fee.
     readonly fee?: number,
-    // option. custome memo. 
+    // option.
     readonly memo?:string
 }
-
 ```
 
 ### Result
 
 ```typescript
 type SendTransactionResult = {
-    // sendPayment hash , you can query tx info by this hash
+    // broadcast hash, you can query tx info by this hash.
     hash: string
 }
 
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body. 
 }
 
 Promise<SendTransactionResult | ProviderError>
@@ -55,30 +54,32 @@ const memo = ""
 
 await window.mina?.sendStakeDelegation({
     to: vaildatorAddress,
-    fee: fee,    // option, if not use ,can delet this params
-    memo: memo,    // option, if not use ,can delet this params
+    fee: fee, // option. If not use, can delet this params.
+    memo: memo, // option. If not use, can delet this params.
 }).catch((err: any) => err);
 ```
 
 ### Result
 
 ```typescript
-// successful result
+// successful result.
 {
   "hash": "CkpYTcQv2obKrD78X7QoHF9j3CfmQWNjNb8UFeDaCVRjcGZpUdxUz"
 }
 
-// user reject 
+// user reject.
 {
   "code": 1002,
   "message": "User rejected the request."
 }
-// can not get connect address
+
+// can not get connect address.
 {
   "code": 1001,
   "message": "User disconnect, please connect first"
 }
-// params check error. there check :addres ,amount , fee
+
+// params check error. there check addres and fee.
 {
   "code": 20003,
   "message": "Invalid method parameter(s)."

@@ -12,9 +12,9 @@ if you want to switch by URL , you can use this method . if URL is added to wall
 
 ```typescript
 type AddChainArgs = {
-    // the graphql url that need add 
+    // the graphql URL that need add.
     readonly url: string
-    // custome name 
+    // custom name.
     readonly name: string
 }
 ```
@@ -23,16 +23,16 @@ type AddChainArgs = {
 
 ```typescript
 type ChainInfoArgs ={
-    // current chain id , current support four types: mainnet , devnet , berkeley , testworld2 , 
+    // current chain id, current support four types: mainnet, devnet, berkeley, testworld2.
     chainId:string,
-    // current chain name
+    // current chain name.
     name:string,
 }
 
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body. 
 }
 
 Promise<ChainInfoArgs | ProviderError>
@@ -65,25 +65,27 @@ await window.mina?.addChain(addInfo).catch((err: any) => err);
 ### Result
 
 ```typescript
-// success
+// successful result.
 {
   "chainId": "mainnet",
   "name": "testchain"
 }
 
-// user reject 
+// user reject.
 {
   "code": 1002,
-  "message": "User rejected the request."
+  "message": "User rejected the request. "
 }
-// params check error. there check :addres ,amount , fee
+
+// params check error. there check graphql-URL.
 {
   "code": 20003,
-  "message": "Invalid method parameter(s)."
+  "message": "Invalid method parameter(s). "
 }
-// have pending chain action
+
+// have pending chain action.
 {
   "code": 20005,
-  "message": "Request already pending. Please wait."
+  "message": "Request already pending. Please wait. "
 }
 ```

@@ -8,27 +8,26 @@ description: This method is used to sign Json message.
 
 ```typescript
 type JsonMessageData  = {
-    // show title
+    // show title.
     label:string
-    // show value
+    // show value.
     value:string
 }
 
 export type SignJsonMessageArgs = {
     readonly message: Array<JsonMessageData>
 }
-
 ```
 
 ### Result
 
 ```typescript
 interface SignedData {
-    // sign account address
+    // sign account address.
     publicKey: string;
-    // sign message
+    // sign message.
     data: string;
-    // sign result
+    // sign result.
     signature: {
         field: string;
         scalar: string;
@@ -36,9 +35,9 @@ interface SignedData {
 }
 
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown;// error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body.
 }
 
 
@@ -92,7 +91,7 @@ await window.mina?.signJsonMessage({ message: msgParams }).catch((err: any) => e
 ### Result
 
 ```typescript
-// success result
+// successful result.
 {
   "signature": {
     "field": "15090234057839595695283019772297604801858172950962387359567660702180735659373",
@@ -102,15 +101,15 @@ await window.mina?.signJsonMessage({ message: msgParams }).catch((err: any) => e
   "data": "[{\"label\":\"Label:\",\"value\":\"Sign Confirm\"},{\"label\":\"Message:\",\"value\":\"Click to sign in and accept the Terms of Service\"},{\"label\":\"URI:\",\"value\":\"window.location.href\"},{\"label\":\"Chain ID:\",\"value\":\"mainnet\"},{\"label\":\"Chain Name:\",\"value\":\"testchain\"},{\"label\":\"Issued At:\",\"value\":1699295213633},{\"label\":\"Resources:\",\"value\":\"https://docs.aurowallet.com/\"}]"
 }
 
-// can not get connect address
+// can not get connect address.
 {
   "code": 1001,
-  "message": "User disconnect, please connect first"
+  "message": "User disconnect, please connect first. "
 }
 
-// user reject 
+// user reject.
 {
   "code": 1002,
-  "message": "User rejected the request."
+  "message": "User rejected the request. "
 }
 ```

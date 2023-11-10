@@ -4,10 +4,10 @@ description: Here is the error message returned by Auro Wallet.
 
 # Error
 
-Now we just use error message show the error detail , website can show the error to user . We reserve the code field, which will be activated later.
+Now we use error message and error code show the error, zkApp can show the error to user.&#x20;
 
 ```typescript
-/**error info type*/
+/** error info type */
 interface ProviderError extends Error {
     message: string;
     code: number;

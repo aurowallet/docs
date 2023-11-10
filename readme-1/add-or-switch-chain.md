@@ -15,7 +15,7 @@ const network: ChainInfoArgs = await window.mina?.requestNetwork()
 
 ## `SwitchChain`
 
-zkApp can switch chain by `switchChain`.
+zkApp can switch chain by this method.
 
 {% hint style="success" %}
 current only support these chain Id:
@@ -46,7 +46,7 @@ const switchResult:ChainInfoArgs|ProviderError = await window.mina
 
 ## Add Chain
 
-If want to customize the adding chain or switch chain, can use this method. When the URL has been added, it will request to switch to chain corresponding to the URL.
+If want to custom the adding chain or switch chain, can use this method. When the URL has been added, it will request to switch to chain corresponding to the URL.
 
 ```typescript
 const addInfo = {
@@ -60,7 +60,7 @@ const addResult:ChainInfoArgs|ProviderError = await window.mina?.addChain(addInf
 
 ## Chain Event
 
-This method is used to listen chain changes. When the Auro Wallet chain changes, the event will be triggered.
+This method is used to listen chain changes. When the Auro Wallet chain change, the event will be trigger.
 
 ```typescript
 window.mina?.on("chainChanged",(chainInfo: ChainInfoArgs) => {

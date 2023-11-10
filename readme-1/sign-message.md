@@ -97,7 +97,7 @@ const signResult:SignedData|ProviderError = await window.mina
     })
     .catch((err: any) => err);
 
-console.log(signResult)
+console.log(signResult);
 ```
 
 ## Verify Message
@@ -109,5 +109,5 @@ let verifyResult:boolean|ProviderError = await window.mina
     ?.verifyMessage(verifyMessageBody)
     .catch((err: any) => err);
   
-console.log(verifyResult)// if verify success,will return true
+console.log(verifyResult); // if verify success,will return true.
 ```
