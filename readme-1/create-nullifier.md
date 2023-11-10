@@ -4,8 +4,9 @@ description: Mainly used to create nullifiers.
 
 # Create Nullifier
 
-<pre class="language-typescript"><code class="lang-typescript"><strong>type Group = {
-</strong>    x: bigint;
+```typescript
+type Group = {
+    x: bigint;
     y: bigint;
 };
 
@@ -32,4 +33,4 @@ const signResult: Nullifier|ProviderError = await window.mina
     ?.createNullifier({
         message: "fields",
     }).catch((err: any) => err);
-</code></pre>
+```
