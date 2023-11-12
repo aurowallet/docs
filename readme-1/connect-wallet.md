@@ -8,7 +8,7 @@ description: Scenarios for connect wallets and request accounts.
 When using the API, you need to ensure that the browser has successfully obtained the **`window.mina`** object.
 {% endhint %}
 
-The presence of the mina provider object, `window.mina`, in a user's browser indicates an Mina Protocol user.
+The presence of the mina provider object `window.mina`, in a user's browser indicates an Mina Protocol user.
 
 To demonstrate this, verify whether your browser is running Auro Wallet by copying and pasting the following code snippet into your browser's developer console:
 
