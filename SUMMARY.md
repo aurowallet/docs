@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Getting Started](README.md)
-* [How to integrate](howto/README.md)
+* [How to integrate](README.md)
   * [Connect Wallet](howto/connect-wallet.md)
   * [Add or Switch Chain](howto/add-or-switch-chain.md)
   * [Create Nullifier](howto/create-nullifier.md)
