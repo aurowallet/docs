@@ -18,7 +18,7 @@ Introduce all the methods provided by Mina Provider and how zkApp can better wor
 [howto](howto/)
 {% endcontent-ref %}
 
-## API
+## API Reference
 
 ***
 
