@@ -17,14 +17,12 @@ const network: ChainInfoArgs = await window.mina?.requestNetwork()
 
 zkApp can switch chain by this method.
 
-{% hint style="success" %}
-current only support these chain Id:
-
-* mainnet
-* devnet
-* berkeley
-* testworld2
-{% endhint %}
+> Current only support these chain Id:
+>
+> * mainnet
+> * devnet
+> * berkeley
+> * testworld2
 
 ```typescript
 type ChainInfoArgs = {

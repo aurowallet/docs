@@ -1,5 +1,5 @@
 ---
-description: Mainly used to create nullifiers.
+description: Mainly used to create nullifier.
 ---
 
 # Create Nullifier
