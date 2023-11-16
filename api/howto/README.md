@@ -2,7 +2,7 @@
 description: Here are some scenarios, you can find demo of use here.
 ---
 
-# How to
+# How to integrate
 
 {% content-ref url="connect-wallet.md" %}
 [connect-wallet.md](connect-wallet.md)
@@ -25,5 +25,5 @@ description: Here are some scenarios, you can find demo of use here.
 {% endcontent-ref %}
 
 {% hint style="info" %}
-Here are only the APIs for some scenarios. For the full API, please see the [API Reference](../reference/api-reference/).
+Here are only the APIs for some scenarios. For the full API, please see the [API Reference](../api-reference/).
 {% endhint %}
