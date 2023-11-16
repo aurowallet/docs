@@ -1,29 +1,31 @@
 ---
-description: Here are some scenarios, you can find demo of use here.
+description: Welcome to the Auro Wallet documentation!
 ---
 
-# How to integrate
-
-{% content-ref url="howto/connect-wallet.md" %}
-[connect-wallet.md](howto/connect-wallet.md)
-{% endcontent-ref %}
-
-{% content-ref url="howto/add-or-switch-chain.md" %}
-[add-or-switch-chain.md](howto/add-or-switch-chain.md)
-{% endcontent-ref %}
-
-{% content-ref url="howto/create-nullifier.md" %}
-[create-nullifier.md](howto/create-nullifier.md)
-{% endcontent-ref %}
-
-{% content-ref url="howto/send-zk-transaction.md" %}
-[send-zk-transaction.md](howto/send-zk-transaction.md)
-{% endcontent-ref %}
-
-{% content-ref url="howto/sign-message.md" %}
-[sign-message.md](howto/sign-message.md)
-{% endcontent-ref %}
+# Getting Started
 
 {% hint style="info" %}
-Here are only the APIs for some scenarios. For the full API, please see the [API Reference](api-reference/).
+[@aurowallet/mina-provider](https://www.npmjs.com/package/@aurowallet/mina-provider) is the middleware on the Mina Protocol used for interaction between zkApp and Auro Wallet. This document is mainly used to introduce the functions of Mina Provider and how to use the API.
 {% endhint %}
+
+## How to integrate
+
+***
+
+Introduce all the methods provided by Mina Provider and how zkApp can better work with Auro Wallet.
+
+{% content-ref url="howto/" %}
+[howto](howto/)
+{% endcontent-ref %}
+
+## API Reference
+
+***
+
+Dive a little deeper and start exploring our API reference to get an idea of everything that's possible with the API:
+
+{% content-ref url="reference/api-reference/" %}
+[api-reference](reference/api-reference/)
+{% endcontent-ref %}
+
+If you want to help us maintain the documentation. please refer to: [Auro Wallet/docs](https://github.com/aurowallet/docs).

@@ -31,7 +31,7 @@ console.log(account)
 
 {% hint style="info" %}
 **requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you want to request account without popup window. you can use\
-[getAccounts](../api-reference/methods/#getaccounts).
+[getAccounts](../reference/api-reference/methods/#getaccounts).
 {% endhint %}
 
 ```javascript
