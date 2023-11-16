@@ -8,7 +8,7 @@ description: Mainly used to create nullifiers.
 
 ```typescript
 type CreateNullifierArgs = {
-    readonly message: bigint[]
+    readonly message: (string | number)[]
 }
 ```
 

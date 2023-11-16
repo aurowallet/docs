@@ -31,6 +31,6 @@ interface ProviderError extends Error {
 
 const signResult: Nullifier|ProviderError = await window.mina
     ?.createNullifier({
-        message: "fields",
+        message: [1,2,3] // or ["1", "2", "3"]
     }).catch((err: any) => err);
 ```
