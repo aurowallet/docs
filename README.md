@@ -14,8 +14,8 @@ description: Welcome to the Auro Wallet documentation!
 
 Introduce all the methods provided by Mina Provider and how zkApp can better work with Auro Wallet.
 
-{% content-ref url="readme-1/" %}
-[readme-1](readme-1/)
+{% content-ref url="howto/" %}
+[howto](howto/)
 {% endcontent-ref %}
 
 ## API

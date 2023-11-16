@@ -1,13 +1,13 @@
 # Table of contents
 
 * [Getting Started](README.md)
-* [How to](readme-1/README.md)
-  * [Connect Wallet](readme-1/connect-wallet.md)
-  * [Add or Switch Chain](readme-1/add-or-switch-chain.md)
-  * [Create Nullifier](readme-1/create-nullifier.md)
-  * [Send Transaction](readme-1/send-transaction.md)
-  * [Send zk Transaction](readme-1/send-zk-transaction.md)
-  * [Sign Message](readme-1/sign-message.md)
+* [How to](howto/README.md)
+  * [Connect Wallet](howto/connect-wallet.md)
+  * [Add or Switch Chain](howto/add-or-switch-chain.md)
+  * [Create Nullifier](howto/create-nullifier.md)
+  * [Send Transaction](howto/send-transaction.md)
+  * [Send zk Transaction](howto/send-zk-transaction.md)
+  * [Sign Message](howto/sign-message.md)
 
 ## Reference
 
