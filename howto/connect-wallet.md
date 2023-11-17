@@ -10,7 +10,7 @@ When using the API, you need to ensure that the browser has successfully obtaine
 
 The presence of the mina provider object `window.mina`, in a user's browser indicates an Mina Protocol user.
 
-To demonstrate this, verify whether your browser is running Auro Wallet by copying and pasting the following code snippet into your browser's developer console:
+To demonstrate this, verify whether your browser is running Auro Wallet by copying and pasting the following code snippet into your browser's developer console.
 
 ```javascript
 if (typeof window.mina !== 'undefined') {
@@ -30,8 +30,7 @@ console.log(account)
 ```
 
 {% hint style="info" %}
-**requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you want to request account without popup window. you can use\
-[getAccounts](../reference/api-reference/methods/#getaccounts).
+**requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you want to request account without popup window. you can use [getAccounts](../reference/api-reference/methods/mina\_accounts.md).
 {% endhint %}
 
 ```javascript
