@@ -10,7 +10,7 @@ description: >-
 {% hint style="info" %}
 The features is implemented through [mina-signer](https://www.npmjs.com/package/mina-signer).
 
-**mina-signer** is the NodeJS SDK provided by **MinaProtocol** for sign, verify signatures, etc.
+**mina-signer** is the NodeJS SDK provided by Mina Protocol for sign, verify signatures, etc.
 {% endhint %}
 
 ## Verify Message
