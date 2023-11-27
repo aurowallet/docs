@@ -1,7 +1,8 @@
 ---
 description: >-
   This scenario mainly explains how the server-side verify the result of the
-  signMessage.
+  signMessage. Fields verification can also be implemented using mina-signer.
+  Only signMessage examples are provided here.
 ---
 
 # VerifyMessage in server-side
