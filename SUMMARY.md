@@ -8,6 +8,7 @@
   * [Send Transaction](howto/send-transaction.md)
   * [Send zk Transaction](howto/send-zk-transaction.md)
   * [Sign Message](howto/sign-message.md)
+  * [VerifyMessage in server-side](howto/verifymessage-in-server-side.md)
 
 ## Reference
 
