@@ -24,6 +24,10 @@ description: Here are some scenarios, you can find demo of use here.
 [sign-message.md](sign-message.md)
 {% endcontent-ref %}
 
+{% content-ref url="verifymessage-in-server-side.md" %}
+[verifymessage-in-server-side.md](verifymessage-in-server-side.md)
+{% endcontent-ref %}
+
 {% hint style="info" %}
 Here are only the APIs for some scenarios. For the full API, please see the [API Reference](../reference/api-reference/).
 {% endhint %}
