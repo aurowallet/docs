@@ -1,7 +1,7 @@
 ---
 description: >-
   This scenario mainly explains how the server-side verify the result of the
-  signature information.
+  signMessage.
 ---
 
 # VerifyMessage in server-side
@@ -9,7 +9,7 @@ description: >-
 {% hint style="info" %}
 The features is implemented through [mina-signer](https://www.npmjs.com/package/mina-signer).
 
-mina-signer is the NodeJS SDK provided by **MinaProtocol** for sign, verify signatures, etc.
+**mina-signer** is the NodeJS SDK provided by **MinaProtocol** for sign, verify signatures, etc.
 {% endhint %}
 
 ## Verify Message
@@ -26,6 +26,7 @@ mina-signer is the NodeJS SDK provided by **MinaProtocol** for sign, verify sign
 
 ```typescript
 var Client = require("mina-signer");
+
 // type Network = 'mainnet' | 'testnet'
 var signerClient = new Client({ network: "mainnet" });
 ```
