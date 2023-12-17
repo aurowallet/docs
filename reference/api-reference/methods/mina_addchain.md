@@ -77,7 +77,7 @@ await window.mina?.addChain(addInfo).catch((err: any) => err);
   "message": "User rejected the request. "
 }
 
-// params check error. there check graphql-URL.
+// params check error. there check GraphQL URL.
 {
   "code": 20003,
   "message": "Invalid method parameter(s). "

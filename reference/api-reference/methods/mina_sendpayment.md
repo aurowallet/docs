@@ -44,7 +44,7 @@ Promise&#x3C;SendTransactionResult | ProviderError>
 | 1001  | User disconnect, need connect Auro Wallet. | Can not get connected account.     |
 | 1002  | The request was rejected by the user.      |                                    |
 | 20003 | The parameters were invalid.               | Please check address, amount, fee. |
-| 23001 | Origin dismatch                            | Check origin safe.                 |
+| 23001 | Origin dismatch.                           | Check origin safe.                 |
 
 ## Example
 
@@ -75,18 +75,18 @@ await window.mina?.sendPayment({
 // user reject.
 {
   "code": 1002,
-  "message": "User rejected the request. "
+  "message": "User rejected the request."
 }
 
 // can not get connect address.
 {
   "code": 1001,
-  "message": "User disconnect, please connect first. "
+  "message": "User disconnect, please connect first."
 }
 
 // params check error. there check addres, amount and fee.
 {
   "code": 20003,
-  "message": "Invalid method parameter(s). "
+  "message": "Invalid method parameter(s)."
 }
 ```

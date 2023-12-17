@@ -76,7 +76,7 @@ await window.mina?.sendStakeDelegation({
 // can not get connect address.
 {
   "code": 1001,
-  "message": "User disconnect, please connect first"
+  "message": "User disconnect, please connect first."
 }
 
 // params check error. there check addres and fee.

@@ -60,12 +60,12 @@ await window.mina?.switchChain({ chainId: "mainnet" }).catch((err: any) => err);
 // user reject.
 {
   "code": 1002,
-  "message": "User rejected the request. "
+  "message": "User rejected the request."
 }
 
 // have pending chain action.
 {
   "code": 20005,
-  "message": "Request already pending. Please wait. "
+  "message": "Request already pending. Please wait."
 }
 ```

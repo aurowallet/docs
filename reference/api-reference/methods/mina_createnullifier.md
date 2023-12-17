@@ -34,9 +34,9 @@ export type Nullifier = {
 };
 
 interface ProviderError extends Error {
-    message: string; // error message
-    code: number; // error code 
-    data?: unknown; // error body 
+    message: string; // error message.
+    code: number; // error code.
+    data?: unknown; // error body.
 }
 
 Promise<Nullifier | ProviderError>

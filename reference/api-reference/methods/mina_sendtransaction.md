@@ -79,7 +79,7 @@ await window.mina?.sendTransaction({
 // can not get connect address.
 {
   "code": 1001,
-  "message": "User disconnect, please connect first"
+  "message": "User disconnect, please connect first."
 }
 
 // user reject.
