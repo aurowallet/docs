@@ -12,7 +12,7 @@ if you want to switch by URL , you can use this method . if URL is added to wall
 
 ```typescript
 type AddChainArgs = {
-    // the graphql URL that need add.
+    // the GraphQL URL that need add.
     readonly url: string
     // custom name.
     readonly name: string
@@ -44,7 +44,7 @@ Promise<ChainInfoArgs | ProviderError>
 | ----- | ------------------------------------------ | -------------------------------------------------- |
 | 1001  | User disconnect, need connect Auro Wallet. | Can not get connected account.                     |
 | 1002  | The request was rejected by the user.      |                                                    |
-| 20003 | The parameters were invalid.               | Please check graphql-url and name.                 |
+| 20003 | The parameters were invalid.               | Please check GraphQL URL and name.                 |
 | 20004 | Not support chain.                         | Please use support chain.                          |
 | 20005 | Request already pending. Please wait.      | Chain action current support one at the same time. |
 | 23001 | Origin dismatch                            | Check origin safe.                                 |
@@ -55,7 +55,7 @@ Promise<ChainInfoArgs | ProviderError>
 
 ```typescript
 const addInfo = {
-    url: encodeURIComponent("graphQLUrl"),
+    url: encodeURIComponent("GraphQL URL"),
     name: "networkName",
 }
 
