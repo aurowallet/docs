@@ -30,10 +30,10 @@ Promise<boolean | ProviderError>
 
 ### Error
 
-|       |                                |                                                                                           |
-| ----- | ------------------------------ | ----------------------------------------------------------------------------------------- |
-| 20002 | Signature verification failed. | This error is returned because an exception was thrown, please check the signature format |
-| 23001 | Origin dismatch.               | Check origin safe.                                                                        |
+|       |                                |                                                                                            |
+| ----- | ------------------------------ | ------------------------------------------------------------------------------------------ |
+| 20002 | Signature verification failed. | This error is returned because an exception was thrown, please check the signature format. |
+| 23001 | Origin dismatch.               | Check origin safe.                                                                         |
 
 ## Example
 

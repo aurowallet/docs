@@ -30,7 +30,7 @@ console.log(account)
 ```
 
 {% hint style="info" %}
-**requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you want to request account without popup window. you can use [getAccounts](../reference/api-reference/methods/mina\_accounts.md).
+**requestAccounts** will show a popup window when Auro Wallet lock or have no connected account, if you want to request account without popup window. You can use [getAccounts](../reference/api-reference/methods/mina\_accounts.md).
 {% endhint %}
 
 ```javascript

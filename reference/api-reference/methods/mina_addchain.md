@@ -23,7 +23,7 @@ type AddChainArgs = {
 
 ```typescript
 type ChainInfoArgs ={
-    // current chain id, current support four types: mainnet, devnet, berkeley, testworld2.
+    // current chain ID, current support four types: mainnet, devnet, berkeley, testworld2.
     chainId:string,
     // current chain name.
     name:string,

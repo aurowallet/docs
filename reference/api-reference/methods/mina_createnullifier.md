@@ -34,7 +34,7 @@ export type Nullifier = {
 };
 
 interface ProviderError extends Error {
-    message: string; // error message.
+    message: string; // error message
     code: number; // error code 
     data?: unknown; // error body 
 }
@@ -96,12 +96,12 @@ await window.mina?.createNullifier({ message: signContent }).catch((err: any) =>
 // can not get connect address.
 {
   "code": 1001,
-  "message": "User disconnect, please connect first. "
+  "message": "User disconnect, please connect first."
 }
 
 // user reject.
 {
   "code": 1002,
-  "message": "User rejected the request. "
+  "message": "User rejected the request."
 }
 ```

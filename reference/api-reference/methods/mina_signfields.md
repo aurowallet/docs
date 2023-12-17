@@ -68,12 +68,12 @@ await window.mina?.signFields({ message: [1,2,3] }).catch((err: any) => err);
 // can not get connect address.
 {
   "code": 1001,
-  "message": "User disconnect, please connect first. "
+  "message": "User disconnect, please connect first."
 }
 
 // user reject.
 {
   "code": 1002,
-  "message": "User rejected the request. "
+  "message": "User rejected the request."
 }
 ```
