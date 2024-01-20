@@ -20,6 +20,11 @@ window.mina?.on('accountsChanged', handler: (accounts: string[]) => {
 });
 ```
 
+{% hint style="success" %}
+**NOTE**\
+When switching to an unconnected account, an empty array will be returned.
+{% endhint %}
+
 ### **chainChanged**
 
 When user switch chain in Auro Wallet, `chainChanged` will be trigger.&#x20;
