@@ -9,9 +9,15 @@ description: This scenario is mainly used to create zk-contract or update zk-con
 This method is use to sign and broadcast zk transaction.
 
 ```typescript
-type SendTransactionResult = {
-    hash: string;
+type SendTransactionHash = {
+  hash: string;
 };
+
+type SignedZkappCommand = {
+  signedData: string; // results of JSON.stringify( signZkappCommand().data )
+};
+
+type SendZkTransactionResult = SendTransactionResult | SignedZkappCommand
 
 interface ProviderError extends Error {
     message: string;
@@ -20,6 +26,7 @@ interface ProviderError extends Error {
 }
 
 interface SendTransactionArgs {
+    readonly onlySign?: boolean; // auro-extension-wallet support from V2.2.16. 
     readonly transaction: string | object;
     readonly feePayer?: {
         readonly fee?: number;
@@ -27,8 +34,9 @@ interface SendTransactionArgs {
     };
 }
 
-const updateResult:SendTransactionResult| ProviderError= await window.mina?
+const updateResult: SendZkTransactionResult| ProviderError= await window.mina?
     .sendTransaction({
+      onlySign: onlySign, // only sign zkCommond, not broadcast.
       transaction: transactionJSON, // this is zk commond, create by zkApp.
       feePayer: { // option.
         fee: fee,
