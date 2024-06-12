@@ -23,10 +23,8 @@ type AddChainArgs = {
 
 ```typescript
 type ChainInfoArgs ={
-    // current chain ID, current support four types: mainnet, devnet, berkeley, testworld2.
-    chainId:string,
-    // current chain name.
-    name:string,
+    // current networkID, now will return mina:mainnet, mina:testnet, mina:berkeley
+    networkID:string,
 }
 
 interface ProviderError extends Error {
@@ -37,6 +35,20 @@ interface ProviderError extends Error {
 
 Promise<ChainInfoArgs | ProviderError>
 ```
+
+{% hint style="danger" %}
+```markdown
+** Please update as soon as possible. **
+`ChainInfoArgs` params have updated from App 2.0.2 & extension 2.2.17.
+Only `networkID` is returned, no longer supports returning `chainId` and `name`. 
+
+// @deprecated from App 2.0.2 & extension 2.2.17.
+type ChainInfoArgs ={ 
+    chainId:string,
+    name:string
+}
+```
+{% endhint %}
 
 ### Errors
 
@@ -67,8 +79,7 @@ await window.mina?.addChain(addInfo).catch((err: any) => err);
 ```typescript
 // successful result.
 {
-  "chainId": "mainnet",
-  "name": "testchain"
+  "networkID": "mina:mainnet"
 }
 
 // user reject.
@@ -89,3 +100,4 @@ await window.mina?.addChain(addInfo).catch((err: any) => err);
   "message": "Request already pending. Please wait. "
 }
 ```
+

@@ -31,8 +31,7 @@ When user switch chain in Auro Wallet, `chainChanged` will be trigger.&#x20;
 
 ```javascript
 type ChainInfoArgs ={
-  chainId:string,
-  name:string,
+  networkID:string
 }
 
 window.mina?.on('chainChanged', handler: (chainInfo: ChainInfoArgs) => void);
@@ -40,7 +39,20 @@ window.mina?.on('chainChanged', handler: (chainInfo: ChainInfoArgs) => void);
 
 ```javascript
 window.mina?.on('chainChanged', handler: (chainInfo: ChainInfoArgs) => {
-   console.log('current chain id', chainInfo.chainId)
-   console.log('current chain name', chainInfo.name)
+   console.log('current networkID', chainInfo.networkID)
 });
 ```
+
+{% hint style="danger" %}
+```markdown
+** Please update as soon as possible. **
+`ChainInfoArgs` params have updated from App 2.0.2 & extension 2.2.17.
+Only `networkID` is returned, no longer supports returning `chainId` and `name`. 
+
+// @deprecated from App 2.0.2 & extension 2.2.17.
+type ChainInfoArgs ={ 
+    chainId:string,
+    name:string
+}
+```
+{% endhint %}

@@ -12,15 +12,26 @@ null
 
 ```typescript
 type ChainInfoArgs ={
-    // current chain ID, now will return mainnet, devnet, berkeley, testworld2.
-    chainId:string,
-    // current chain name. The default node name is fixed, 
-    // and the custom added ones are user-defined.
-    name:string,
+    // current networkID, now will return mina:mainnet, mina:testnet, mina:berkeley
+    networkID:string
 }
 
 Promise<ChainInfoArgs>
 ```
+
+{% hint style="danger" %}
+```markdown
+** Please update as soon as possible. **
+`ChainInfoArgs` params have updated from App 2.0.2 & extension 2.2.17.
+Only `networkID` is returned, no longer supports returning `chainId` and `name`. 
+
+// @deprecated from App 2.0.2 & extension 2.2.17.
+type ChainInfoArgs ={ 
+    chainId:string,
+    name:string
+}
+```
+{% endhint %}
 
 ### Errors
 
@@ -38,7 +49,6 @@ await window.mina?.requestNetwork().catch((err: any) => err);
 
 ```typescript
 {
-  "chainId": "mainnet",
-  "name": "Mainnet"
+  "networkID": "mina:mainnet"
 }
 ```

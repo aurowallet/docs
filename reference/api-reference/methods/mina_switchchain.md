@@ -8,8 +8,8 @@ description: This method is used to switch chain of Auro Wallet by chainId.
 
 ```typescript
 type SwitchChainArgs = {
-    // Target chain ID. current support four types: mainnet, devnet, berkeley, testworld2.
-    readonly chainId: string
+    // Target networkID. now will return mina:mainnet, mina:testnet, mina:berkeley
+    readonly networkID: string
 }
 ```
 
@@ -17,10 +17,8 @@ type SwitchChainArgs = {
 
 ```typescript
 type ChainInfoArgs ={
-    // current chain ID, current support four types: mainnet, devnet, berkeley, testworld2.
-    chainId:string,
-    // current chain name.
-    name:string,
+    // current networkID, now will return mina:mainnet, mina:testnet, mina:berkeley
+    networkID:string
 }
 
 interface ProviderError extends Error {
@@ -31,6 +29,20 @@ interface ProviderError extends Error {
 
 Promise<ChainInfoArgs | ProviderError>
 ```
+
+{% hint style="danger" %}
+```markdown
+** Please update as soon as possible. **
+`ChainInfoArgs` params have updated from App 2.0.2 & extension 2.2.17.
+Only `networkID` is returned, no longer supports returning `chainId` and `name`. 
+
+// @deprecated from App 2.0.2 & extension 2.2.17.
+type ChainInfoArgs ={ 
+    chainId:string,
+    name:string
+}
+```
+{% endhint %}
 
 ### Errors
 
@@ -45,7 +57,7 @@ Promise<ChainInfoArgs | ProviderError>
 ### Request
 
 ```typescript
-await window.mina?.switchChain({ chainId: "mainnet" }).catch((err: any) => err);
+await window.mina?.switchChain({ networkID: "mina:mainnet" }).catch((err: any) => err);
 ```
 
 ### Result
@@ -53,8 +65,7 @@ await window.mina?.switchChain({ chainId: "mainnet" }).catch((err: any) => err);
 ```typescript
 // successful result.
 {
-  "chainId": "mainnet",
-  "name": "testchain"
+  "networkID": "mina:mainnet"
 }
 
 // user reject.

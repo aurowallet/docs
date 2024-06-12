@@ -6,7 +6,7 @@ description: Scenarios for interact chain with Auro Wallet.
 
 ## RequestNetwork
 
-During initialization, zkApp can get current chainId and chain name by call `requestNetwork`.
+During initialization, zkApp can get current networkID by call `requestNetwork`.
 
 ```typescript
 const network: ChainInfoArgs = await window.mina?.requestNetwork()
@@ -15,19 +15,19 @@ const network: ChainInfoArgs = await window.mina?.requestNetwork()
 
 ## `SwitchChain`
 
-zkApp can switch chain by this method.
+zkApp can switch chain by this method.&#x20;
 
-> Current only support these chain Id:
+The following are the networkID that Auro supports by default. If you want to use other networkID, need to add network first, then use the target networkID as a parameter to switch.
+
+> Current support these networkID (default):
 >
-> * mainnet
-> * devnet
-> * berkeley
-> * testworld2
+> * mina:mainnet
+> * mina:testnet
+> * mina:berkeley
 
 ```typescript
 type ChainInfoArgs = {
-    chainId: string;
-    name: string;
+    networkID: string;
 };
 
 interface ProviderError extends Error {
@@ -38,9 +38,23 @@ interface ProviderError extends Error {
 
 const switchResult:ChainInfoArgs|ProviderError = await window.mina
     ?.switchChain({
-        chainId: chainId.trim(),
+        networkID: networkID.trim(),
     }).catch((err: any) => err);
 ```
+
+{% hint style="danger" %}
+```markdown
+** Please update as soon as possible. **
+`ChainInfoArgs` params have updated from App 2.0.2 & extension 2.2.17.
+Only `networkID` is returned, no longer supports returning `chainId` and `name`. 
+
+// @deprecated from App 2.0.2 & extension 2.2.17.
+type ChainInfoArgs ={ 
+    chainId:string,
+    name:string
+}
+```
+{% endhint %}
 
 ## Add Chain
 

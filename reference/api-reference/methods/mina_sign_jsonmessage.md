@@ -68,12 +68,8 @@ const msgParams = [
       value: "window.location.href",
     },
     {
-      label: "Chain ID:",
-      value: network.chainId,
-    },
-    {
-      label: "Chain Name:",
-      value: network.name,
+      label: "networkID:",
+      value: network.networkID,
     },
     {
       label: "Issued At:",
@@ -94,11 +90,11 @@ await window.mina?.signJsonMessage({ message: msgParams }).catch((err: any) => e
 // successful result.
 {
   "signature": {
-    "field": "15090234057839595695283019772297604801858172950962387359567660702180735659373",
-    "scalar": "21947964776036205182010988394099954210017471543964218028225956286142062520626"
+    "field": "53162080350849153826967095054833981754739013396707431795337381755943299841",
+    "scalar": "15611159828454615720437923596295410541639103513124421213633470429174796003052"
   },
   "publicKey": "B62qr2zNMypNKXmzMYSVotChTBRfXzHRtshvbuEjAQZLq6aEa8RxLyD",
-  "data": "[{\"label\":\"Label:\",\"value\":\"Sign Confirm\"},{\"label\":\"Message:\",\"value\":\"Click to sign in and accept the Terms of Service\"},{\"label\":\"URI:\",\"value\":\"window.location.href\"},{\"label\":\"Chain ID:\",\"value\":\"mainnet\"},{\"label\":\"Chain Name:\",\"value\":\"testchain\"},{\"label\":\"Issued At:\",\"value\":1699295213633},{\"label\":\"Resources:\",\"value\":\"https://docs.aurowallet.com/\"}]"
+  "data": "[{"label":"Label:","value":"Sign Confirm"},{"label":"Message:","value":"Click to sign in and accept the Terms of Service"},{"label":"URI:","value":"window.location.href"},{"label":"networkID:","value":"mina:testnet"},{"label":"Issued At:","value":1718168623709},{"label":"Resources:","value":"https://docs.aurowallet.com/"}]"
 }
 
 // can not get connect address.

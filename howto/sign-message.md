@@ -74,8 +74,8 @@ const msgParams = [
       value: window.location.href,
     },
     {
-      label: "Chain ID:",
-      value: network.chainId,
+      label: "networkID:",
+      value: network.networkID,
     },
     {
       label: "Chain Name:",
