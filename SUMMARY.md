@@ -9,6 +9,10 @@
   * [Send zk Transaction](howto/send-zk-transaction.md)
   * [Sign Message](howto/sign-message.md)
   * [VerifyMessage in server-side](howto/verifymessage-in-server-side.md)
+* [Wallet Basics](wallet-basics/README.md)
+  * [Submit token info](wallet-basics/submit-token-info.md)
+  * [​Pull Up Auro Wallet with DeepLink](wallet-basics/pull-up-auro-wallet-with-deeplink.md)
+  * [Mina Providers](wallet-basics/mina-providers.md)
 
 ## Reference
 
