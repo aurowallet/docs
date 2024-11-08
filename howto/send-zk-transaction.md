@@ -27,6 +27,7 @@ interface ProviderError extends Error {
 
 interface SendTransactionArgs {
     readonly onlySign?: boolean; // auro-extension-wallet support from V2.2.16. 
+    readonly nonce?: number; // auro-extension-wallet support from V2.3.0. 
     readonly transaction: string | object;
     readonly feePayer?: {
         readonly fee?: number;

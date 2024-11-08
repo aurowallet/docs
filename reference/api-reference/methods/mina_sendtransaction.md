@@ -14,6 +14,8 @@ You need to create zk commond in zkApp first, then call Auro Wallet to sign and 
 interface SendTransactionArgs  {
     // only sign with auro wallet, auro-extension-wallet support from V2.2.16. 
     readonly onlySign?: boolean; 
+    // custom nonce with auro wallet, auro-extension-wallet support from V2.3.0. 
+    readonly nonce?: number; 
     // transaction is zk commond that create by contract.
     readonly transaction: string | object;
     // option. 
