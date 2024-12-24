@@ -8,7 +8,7 @@ description: This method is used to switch chain of Auro Wallet by chainId.
 
 ```typescript
 type SwitchChainArgs = {
-    // Target networkID. now will return mina:mainnet, mina:testnet, mina:berkeley
+    // Target networkID. now will return mina:mainnet, mina:devnet, zeko:testnet
     readonly networkID: string
 }
 ```

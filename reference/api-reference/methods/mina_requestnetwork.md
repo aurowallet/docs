@@ -12,7 +12,7 @@ null
 
 ```typescript
 type ChainInfoArgs ={
-    // current networkID, now will return mina:mainnet, mina:testnet, mina:berkeley
+    // current networkID, now will return mina:mainnet, mina:devnet, zeko:testnet
     networkID:string
 }
 

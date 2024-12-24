@@ -22,8 +22,8 @@ The following are the networkID that Auro supports by default. If you want to us
 > Current support these networkID (default):
 >
 > * mina:mainnet
-> * mina:testnet
-> * mina:berkeley
+> * mina:devnet // Update from mina:testnet to mina:devnet from extension 2.3.1, App 2.1.0
+> * zeko:testnet
 
 ```typescript
 type ChainInfoArgs = {
