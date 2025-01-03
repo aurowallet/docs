@@ -16,7 +16,7 @@ let paramsURL = encodeURIComponent(targetURL);
 let targetNetworkId = ""; // Optional, the target network ID, e.g., mina:mainnet. You can retrieve this from the daemon node. If not provided, the App will use its current network by default.
 let networkId = encodeURIComponent(targetNetworkId);
 
-const endURL = `https://aurowallet.com/applinks?action=openurl&networkid=${networkId}&url=${paramsURL}`;
+const endURL = `https://www.aurowallet.com/applinks?action=openurl&networkid=${networkId}&url=${paramsURL}`;
 window.location.href = endURL;
 
 ```
