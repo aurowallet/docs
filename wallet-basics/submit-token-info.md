@@ -1,7 +1,5 @@
 ---
-description: >-
-  Auro Wallet will display the token assets based on the submitted information
-  by default.
+description: Auro Wallet will support the transfer of token assets submitted by default.
 ---
 
 # Submit token info
@@ -68,3 +66,18 @@ Add the signature of the `token.json` file submitted or updated in step 1 to the
 #### 6. Make a PR
 
 Once all steps are completed, create a PR for review.
+
+
+
+{% hint style="info" %}
+**Disclaimer**
+
+Auro Wallet provides this repository and its contents on an "AS IS" and "AS AVAILABLE" basis without any representations or warranties of any kind, either express or implied. To the fullest extent permitted by applicable law, Auro Wallet expressly disclaims all warranties, including but not limited to:
+
+1. Warranty of Merchantability: No assurance is provided that the tokens or associated services are merchantable or fit for sale.
+2. Warranty of Fitness for a Particular Purpose: Auro Wallet does not guarantee that the tokens or associated services will meet your specific requirements or expectations.
+3. Warranty of Title: Auro Wallet does not warrant that it owns or has the necessary rights to provide the tokens or associated services without encumbrances.
+4. Warranty Against Infringement: Auro Wallet makes no representations regarding non-infringement of intellectual property or other proprietary rights of any third party.
+
+These disclaimers apply regardless of whether the warranties are implied by law, arise from a course of dealing, course of performance, usage of trade, or otherwise.
+{% endhint %}
