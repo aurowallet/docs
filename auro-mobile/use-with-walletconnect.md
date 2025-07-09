@@ -7,7 +7,9 @@ description: >-
 # Use with WalletConnect
 
 {% hint style="info" %}
-The Auro Wallet in-app browser does not support building zkApps (due to [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) limitations). Therefore, you need to build the zkApp in the Chrome mobile browser on Android and interact with Auro Wallet via deeplink.
+The Auro Wallet in-app browser does not support building zkApps (due to [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) limitations). Therefore, you need to build the zkApp in the Chrome mobile browser on Android and interact with Auro Wallet via deeplink.\
+\
+This feature is available in **Auro Mobile v2.1.2 or later**. Please update to the latest version to use this feature.
 {% endhint %}
 
 ## Step
