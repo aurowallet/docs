@@ -10,11 +10,12 @@
   * [Sign Message](howto/sign-message.md)
   * [VerifyMessage in server-side](howto/verifymessage-in-server-side.md)
   * [Anonymous Credentials](howto/anonymous-credentials.md)
-  * [Building zkApp on Android](howto/building-zkapp-on-android.md)
 * [Wallet Basics](wallet-basics/README.md)
   * [Submit token info](wallet-basics/submit-token-info.md)
-  * [​Pull Up Auro Wallet with DeepLink](wallet-basics/pull-up-auro-wallet-with-deeplink.md)
   * [Mina Providers](wallet-basics/mina-providers.md)
+* [Auro Mobile](auro-mobile/README.md)
+  * [Use with WalletConnect](auro-mobile/use-with-walletconnect.md)
+  * [​Pull Up Auro Wallet with DeepLink](auro-mobile/pull-up-auro-wallet-with-deeplink.md)
 
 ## Reference
 
