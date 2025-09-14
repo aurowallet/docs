@@ -24,7 +24,7 @@ const client = await SignClient.init({
     name: "Auro Wallet Demo",
     description: "A Mina Protocol dApp with WalletConnect",
     url: window.location.origin,
-    icons: ["https://www.aurowallet.com/imgs/auro.png"],
+    icons: ["https://www.aurowallet.com/imgs/auro_icon.png"],
   },
   logger: "warn",
 });
