@@ -68,11 +68,17 @@ client.on("session_request_sent", (event: any) => {
       "mina_createNullifier",
     ].includes(event?.request?.method)
   ) {
-    const deepLink = `aurowallet://`;
-    console.log("Auro Wallet Deep Link for request:", deepLink);
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     if (isMobile) {
-      openDeepLink(deepLink);
+      if (isIOS) {
+        console.log("iOS: Dispatching wallet prompt for", event.request.method);
+        window.dispatchEvent(new CustomEvent("showOpenWalletPrompt", { detail: { action: "request", method: event.request.method } }));
+      } else {
+        const deepLink = `aurowallet://`;
+        console.log("Auro Wallet Deep Link for request (Android):", deepLink);
+        openDeepLink(deepLink);
+      }
     }
   }
 });
